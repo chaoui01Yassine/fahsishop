@@ -100,7 +100,7 @@ swiftmailer:
   spool: { type: memory }
 
 api_platform:
-  title: PrestaShop API
+  title: fahsishop API
   version: 1.0.0
   enable_entrypoint: false
   mapping:

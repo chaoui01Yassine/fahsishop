@@ -1,6 +1,6 @@
 {**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+ * Copyright since 2007 fahsishop and Contributors
+ * fahsishop is an International Registered Trademark & Property of fahsishop
  *
  * NOTICE OF LICENSE
  *
@@ -10,16 +10,16 @@
  * https://opensource.org/licenses/AFL-3.0
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
+ * to contact@fahsishop.com so we can send you a copy immediately.
  *
  * DISCLAIMER
  *
- * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
- * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to https://devdocs.prestashop.com/ for more information.
+ * Do not edit or add to this file if you wish to upgrade fahsishop to newer
+ * versions in the future. If you wish to customize fahsishop for your
+ * needs please refer to https://fahsishop.com/ for more information.
  *
- * @author    PrestaShop SA and Contributors <contact@prestashop.com>
- * @copyright Since 2007 PrestaShop SA and Contributors
+ * @author    fahsishop and Contributors <contact@fahsishop.com>
+ * @copyright Since 2007 fahsishop and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
 <div class="container">
@@ -41,15 +41,17 @@
         {hook h='displayFooterAfter'}
       {/block}
     </div>
-    <div class="row">
+    <div class="row footer-bottom" style="margin-top:30px; padding:16px 0; border-top:1px solid rgba(201,149,42,0.2); text-align:center;">
       <div class="col-md-12">
-        <p class="text-sm-center">
-          {block name='copyright_link'}
-            <a href="https://www.prestashop-project.org/" target="_blank" rel="noopener noreferrer nofollow">
-              {l s='%copyright% %year% - Ecommerce software by %prestashop%' sprintf=['%prestashop%' => 'PrestaShop™', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
-            </a>
-          {/block}
-        </p>
+        {block name='copyright_link'}
+          <span style="color:#7A6A5A; font-size:12px; letter-spacing:1px;">
+            ✦ &nbsp;
+            <strong style="color:#C9952A; font-family:'Playfair Display',serif; font-size:14px;">fahsishop</strong>
+            &nbsp;— Vêtements &amp; Artisanat Marocain Traditionnel
+            &nbsp; · &nbsp; © {'Y'|date} fahsishop.com
+            &nbsp;✦
+          </span>
+        {/block}
       </div>
     </div>
   </div>

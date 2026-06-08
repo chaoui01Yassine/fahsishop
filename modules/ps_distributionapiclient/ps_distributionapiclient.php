@@ -1,7 +1,7 @@
 <?php
 /**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+ * Copyright since 2007 fahsishop and Contributors
+ * fahsishop is an International Registered Trademark & Property of fahsishop
  *
  * NOTICE OF LICENSE
  *
@@ -11,10 +11,10 @@
  * https://opensource.org/licenses/AFL-3.0
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
+ * to contact@fahsishop.com so we can send you a copy immediately.
  *
- * @author    PrestaShop SA and Contributors <contact@prestashop.com>
- * @copyright Since 2007 PrestaShop SA and Contributors
+ * @author    fahsishop and Contributors <contact@fahsishop.com>
+ * @copyright Since 2007 fahsishop and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
  */
 
@@ -37,7 +37,7 @@ class Ps_Distributionapiclient extends Module
         $this->name = 'ps_distributionapiclient';
         $this->displayName = $this->trans('Distribution API Client', [], 'Modules.Distributionapiclient.Admin');
         $this->description = $this->trans('Download and upgrade PrestaShop\'s native modules.', [], 'Modules.Distributionapiclient.Admin');
-        $this->author = 'PrestaShop';
+        $this->author = 'fahsishop';
         $this->version = '1.1.1';
         $this->ps_versions_compliancy = ['min' => '8.0.2', 'max' => _PS_VERSION_];
         $this->tab = 'market_place';

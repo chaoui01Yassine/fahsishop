@@ -4,7 +4,7 @@
     <displayName><![CDATA[Link List]]></displayName>
     <version><![CDATA[6.0.7]]></version>
     <description><![CDATA[Adds a block with several links.]]></description>
-    <author><![CDATA[PrestaShop]]></author>
+    <author><![CDATA[fahsishop]]></author>
     <tab><![CDATA[front_office_features]]></tab>
     <is_configurable>1</is_configurable>
     <need_instance>0</need_instance>

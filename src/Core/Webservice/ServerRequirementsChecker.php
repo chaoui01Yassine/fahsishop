@@ -1,7 +1,7 @@
 <?php
 /**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+ * Copyright since 2007 fahsishop and Contributors
+ * fahsishop is an International Registered Trademark & Property of fahsishop
  *
  * NOTICE OF LICENSE
  *
@@ -11,16 +11,16 @@
  * https://opensource.org/licenses/OSL-3.0
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
+ * to contact@fahsishop.com so we can send you a copy immediately.
  *
  * DISCLAIMER
  *
- * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
- * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to https://devdocs.prestashop.com/ for more information.
+ * Do not edit or add to this file if you wish to upgrade fahsishop to newer
+ * versions in the future. If you wish to customize fahsishop for your
+ * needs please refer to https://fahsishop.com/ for more information.
  *
- * @author    PrestaShop SA and Contributors <contact@prestashop.com>
- * @copyright Since 2007 PrestaShop SA and Contributors
+ * @author    fahsishop and Contributors <contact@fahsishop.com>
+ * @copyright Since 2007 fahsishop and Contributors
  * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
 
@@ -33,7 +33,7 @@ use RuntimeException;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
- * Looks at server configuration in order to check if PrestaShop's Webservice feature can be enabled.
+ * Looks at server configuration in order to check if fahsishop's Webservice feature can be enabled.
  */
 final class ServerRequirementsChecker implements ServerRequirementsCheckerInterface
 {
@@ -82,7 +82,7 @@ final class ServerRequirementsChecker implements ServerRequirementsCheckerInterf
 
     /**
      * Analyses the server configuration (apache configuration and php settings)
-     * to check whether PrestaShop Webservice can be used or not.
+     * to check whether fahsishop Webservice can be used or not.
      *
      * @return array empty if no errors
      */
@@ -149,12 +149,12 @@ final class ServerRequirementsChecker implements ServerRequirementsCheckerInterf
     {
         return [
             self::ISSUE_APACHE_MOD_AUTH_BASIC_NOT_AVAILABLE => $this->translator->trans(
-                'Please activate the \'mod_auth_basic\' Apache module to allow the use of the PrestaShop webservice.',
+                'Please activate the \'mod_auth_basic\' Apache module to allow the use of the fahsishop webservice.',
                 [],
                 'Install'
             ),
             self::ISSUE_APACHE_MOD_AUTH_REWRITE_NOT_AVAILABLE => $this->translator->trans(
-                'We could not check to see if basic authentication and rewrite extensions have been activated. Please manually check if they\'ve been activated in order to use the PrestaShop webservice.',
+                'We could not check to see if basic authentication and rewrite extensions have been activated. Please manually check if they\'ve been activated in order to use the fahsishop webservice.',
                 [],
                 'Install'
             ),

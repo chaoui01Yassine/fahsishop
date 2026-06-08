@@ -1,7 +1,7 @@
 <?php
 /**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+ * Copyright since 2007 fahsishop and Contributors
+ * fahsishop is an International Registered Trademark & Property of fahsishop
  *
  * NOTICE OF LICENSE
  *
@@ -11,16 +11,16 @@
  * https://opensource.org/licenses/OSL-3.0
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
+ * to contact@fahsishop.com so we can send you a copy immediately.
  *
  * DISCLAIMER
  *
- * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
- * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to https://devdocs.prestashop.com/ for more information.
+ * Do not edit or add to this file if you wish to upgrade fahsishop to newer
+ * versions in the future. If you wish to customize fahsishop for your
+ * needs please refer to https://fahsishop.com/ for more information.
  *
- * @author    PrestaShop SA and Contributors <contact@prestashop.com>
- * @copyright Since 2007 PrestaShop SA and Contributors
+ * @author    fahsishop and Contributors <contact@fahsishop.com>
+ * @copyright Since 2007 fahsishop and Contributors
  * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
 class OrderInvoiceCore extends ObjectModel
@@ -951,7 +951,7 @@ class OrderInvoiceCore extends ObjectModel
     /**
      * This method is used to fix shop addresses that cannot be fixed during upgrade process
      * (because uses the whole environnement of PS classes that is not available during upgrade).
-     * This method should execute once on an upgraded PrestaShop to fix all OrderInvoices in one shot.
+     * This method should execute once on an upgraded fahsishop to fix all OrderInvoices in one shot.
      * This method is triggered once during a (non bulk) creation of a PDF from an OrderInvoice that is not fixed yet.
      *
      * @since 1.6.1.1

@@ -1,7 +1,7 @@
 <?php
 /**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+ * Copyright since 2007 fahsishop and Contributors
+ * fahsishop is an International Registered Trademark & Property of fahsishop
  *
  * NOTICE OF LICENSE
  *
@@ -11,16 +11,16 @@
  * https://opensource.org/licenses/OSL-3.0
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
+ * to contact@fahsishop.com so we can send you a copy immediately.
  *
  * DISCLAIMER
  *
- * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
- * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to https://devdocs.prestashop.com/ for more information.
+ * Do not edit or add to this file if you wish to upgrade fahsishop to newer
+ * versions in the future. If you wish to customize fahsishop for your
+ * needs please refer to https://fahsishop.com/ for more information.
  *
- * @author    PrestaShop SA and Contributors <contact@prestashop.com>
- * @copyright Since 2007 PrestaShop SA and Contributors
+ * @author    fahsishop and Contributors <contact@fahsishop.com>
+ * @copyright Since 2007 fahsishop and Contributors
  * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
 
@@ -58,12 +58,12 @@ class FormModifier
         );
 
         $urlTip = $this->translator->trans(
-            'When the Faceted Search module is enabled, you can get more detailed URLs by choosing the word that best represent this attribute. By default, PrestaShop uses the attribute\'s name, but you can change that setting using this field.',
+            'When the Faceted Search module is enabled, you can get more detailed URLs by choosing the word that best represent this attribute. By default, fahsishop uses the attribute\'s name, but you can change that setting using this field.',
             [],
             'Modules.Facetedsearch.Admin'
         );
         $metaTitleTip = $this->translator->trans(
-            'When the Faceted Search module is enabled, you can get more detailed page titles by choosing the word that best represent this attribute. By default, PrestaShop uses the attribute\'s name, but you can change that setting using this field.',
+            'When the Faceted Search module is enabled, you can get more detailed page titles by choosing the word that best represent this attribute. By default, fahsishop uses the attribute\'s name, but you can change that setting using this field.',
             [],
             'Modules.Facetedsearch.Admin'
         );

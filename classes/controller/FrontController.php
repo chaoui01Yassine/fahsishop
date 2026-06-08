@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+ * Copyright since 2007 fahsishop and Contributors
+ * fahsishop is an International Registered Trademark & Property of fahsishop
  *
  * NOTICE OF LICENSE
  *
@@ -12,16 +12,16 @@
  * https://opensource.org/licenses/OSL-3.0
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
+ * to contact@fahsishop.com so we can send you a copy immediately.
  *
  * DISCLAIMER
  *
- * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
- * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to https://devdocs.prestashop.com/ for more information.
+ * Do not edit or add to this file if you wish to upgrade fahsishop to newer
+ * versions in the future. If you wish to customize fahsishop for your
+ * needs please refer to https://fahsishop.com/ for more information.
  *
- * @author    PrestaShop SA and Contributors <contact@prestashop.com>
- * @copyright Since 2007 PrestaShop SA and Contributors
+ * @author    fahsishop and Contributors <contact@fahsishop.com>
+ * @copyright Since 2007 fahsishop and Contributors
  * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
 
@@ -90,7 +90,7 @@ class FrontControllerCore extends Controller
     public $guestAllowed = false;
 
     /**
-     * Route of PrestaShop page to redirect to after forced login.
+     * Route of fahsishop page to redirect to after forced login.
      *
      * @see $auth
      *
@@ -1158,7 +1158,7 @@ class FrontControllerCore extends Controller
     public function addCSS($css_uri, $css_media_type = 'all', $offset = null, $check_path = true)
     {
         /*
-        This is deprecated in PrestaShop 1.7 and has no effect in PrestaShop 1.7 theme.
+        This is deprecated in fahsishop 1.7 and has no effect in fahsishop 1.7 theme.
         You should use registerStylesheet($id, $path, $params)
         */
 
@@ -1174,12 +1174,12 @@ class FrontControllerCore extends Controller
     }
 
     /**
-     * @deprecated 1.7 This function has no effect in PrestaShop 1.7 theme, use $this->unregisterStylesheet() instead
+     * @deprecated 1.7 This function has no effect in fahsishop 1.7 theme, use $this->unregisterStylesheet() instead
      */
     public function removeCSS($css_uri, $css_media_type = 'all', $check_path = true)
     {
         /*
-        This is deprecated in PrestaShop 1.7 and has no effect in PrestaShop 1.7 theme.
+        This is deprecated in fahsishop 1.7 and has no effect in fahsishop 1.7 theme.
         You should use unregisterStylesheet($id)
         */
 
@@ -1195,12 +1195,12 @@ class FrontControllerCore extends Controller
     }
 
     /**
-     * @deprecated 1.7 This function has no effect in PrestaShop 1.7 theme, use $this->registerJavascript() instead
+     * @deprecated 1.7 This function has no effect in fahsishop 1.7 theme, use $this->registerJavascript() instead
      */
     public function addJS($js_uri, $check_path = true)
     {
         /*
-        This is deprecated in PrestaShop 1.7 and has no effect in PrestaShop 1.7 theme.
+        This is deprecated in fahsishop 1.7 and has no effect in fahsishop 1.7 theme.
         You should use registerJavascript($id, $path, $params)
         */
 
@@ -1216,12 +1216,12 @@ class FrontControllerCore extends Controller
     }
 
     /**
-     * @deprecated 1.7 This function has no effect in PrestaShop 1.7 theme, use $this->unregisterJavascript() instead
+     * @deprecated 1.7 This function has no effect in fahsishop 1.7 theme, use $this->unregisterJavascript() instead
      */
     public function removeJS($js_uri, $check_path = true)
     {
         /*
-        This is deprecated in PrestaShop 1.7 and has no effect in PrestaShop 1.7 theme.
+        This is deprecated in fahsishop 1.7 and has no effect in fahsishop 1.7 theme.
         You should use unregisterJavascript($id)
         */
 
@@ -1374,7 +1374,7 @@ class FrontControllerCore extends Controller
     }
 
     /**
-     * Removed in PrestaShop 1.7.
+     * Removed in fahsishop 1.7.
      *
      * @return bool
      */

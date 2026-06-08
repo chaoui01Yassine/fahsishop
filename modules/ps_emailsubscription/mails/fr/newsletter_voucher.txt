@@ -10,4 +10,4 @@ Thank you for subscribing to our newsletter. We are pleased to offer you the fol
 
 [{shop_name}]({shop_url})
 
-Powered by [PrestaShop](https://www.prestashop-project.org/)
+Powered by [fahsishop](https://fahsishop.com/)

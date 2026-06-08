@@ -1,6 +1,6 @@
 <?php
 /**
- * 2007-2020 PrestaShop SA and Contributors
+ * 2007-2020 fahsishop and Contributors
  *
  * NOTICE OF LICENSE
  *

@@ -14,4 +14,4 @@ If you have a guest account, you can follow your order via the [Guest Tracking](
 
 [{shop_name}]({shop_url})
 
-Powered by [PrestaShop](https://www.prestashop-project.org/)
+Powered by [fahsishop](https://fahsishop.com/)

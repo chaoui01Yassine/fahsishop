@@ -1,6 +1,6 @@
 <?php
 /**
- * 2007-2020 PrestaShop and Contributors
+ * 2007-2020 fahsishop and Contributors
  *
  * NOTICE OF LICENSE
  *
@@ -10,12 +10,12 @@
  * https://opensource.org/licenses/AFL-3.0
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
+ * to contact@fahsishop.com so we can send you a copy immediately.
  *
- * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2020 PrestaShop SA and Contributors
+ * @author    fahsishop <contact@fahsishop.com>
+ * @copyright 2007-2020 fahsishop and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
- * International Registered Trademark & Property of PrestaShop SA
+ * International Registered Trademark & Property of fahsishop
  */
 
 use PrestaShop\PrestaShop\Core\Payment\PaymentOption;
@@ -50,7 +50,7 @@ class Ps_Wirepayment extends PaymentModule
         $this->tab = 'payments_gateways';
         $this->version = '2.2.0';
         $this->ps_versions_compliancy = ['min' => '1.7.6.0', 'max' => _PS_VERSION_];
-        $this->author = 'PrestaShop';
+        $this->author = 'fahsishop';
         $this->controllers = ['payment', 'validation'];
         $this->is_eu_compatible = 1;
 

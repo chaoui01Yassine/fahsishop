@@ -21,7 +21,7 @@ services:
     arguments:
       - '@translator'
       # separator between attributes (ex : size: M, color: blue), to be replaced by a configuration parameter (env or php const)
-      # https://github.com/PrestaShop/PrestaShop/issues/28512
+      # https://github.com/fahsishop/fahsishop/issues/28512
       - ', '
       - '@=service("prestashop.adapter.legacy.configuration").get("PS_ATTRIBUTE_ANCHOR_SEPARATOR")'
 

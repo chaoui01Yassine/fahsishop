@@ -1,16 +1,16 @@
 {*
-* 2007-2018 PrestaShop
+* 2007-2018 fahsishop
 *
 * DISCLAIMER
 *
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
+* Do not edit or add to this file if you wish to upgrade fahsishop to newer
+* versions in the future. If you wish to customize fahsishop for your
+* needs please refer to https://fahsishop.com for more information.
 *
-* @author    PrestaShop SA <contact@prestashop.com>
-* @copyright 2007-2018 PrestaShop SA
-* @license   http://addons.prestashop.com/en/content/12-terms-and-conditions-of-use
-* International Registered Trademark & Property of PrestaShop SA
+* @author    fahsishop <contact@fahsishop.com>
+* @copyright 2007-2018 fahsishop
+* @license   https://fahsishop.com/en/content/12-terms-and-conditions-of-use
+* International Registered Trademark & Property of fahsishop
 *}
 
 <div class="modal fade" id="upload-child-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">

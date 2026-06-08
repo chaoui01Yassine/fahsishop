@@ -1,7 +1,7 @@
 <?php
 /**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+ * Copyright since 2007 fahsishop and Contributors
+ * fahsishop is an International Registered Trademark & Property of fahsishop
  *
  * NOTICE OF LICENSE
  *
@@ -11,16 +11,16 @@
  * https://opensource.org/licenses/AFL-3.0
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
+ * to contact@fahsishop.com so we can send you a copy immediately.
  *
- * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright Since 2007 PrestaShop SA and Contributors
+ * @author    fahsishop <contact@fahsishop.com>
+ * @copyright Since 2007 fahsishop and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  */
 global $_MODULE;
 $_MODULE = [];
-$_MODULE['<{psgdpr}prestashop>psgdpr_5966265f35dd87febf4d59029bc9ef66'] = 'Cumplimiento del RGPD de PrestaShop';
-$_MODULE['<{psgdpr}prestashop>psgdpr_dbf90f78fc135d723570a4a43041a3dc'] = 'Cumple las principales obligaciones recogidas en el Reglamento general de protección de datos de la Unión Europea gracias a este módulo desarrollado por PrestaShop.';
+$_MODULE['<{psgdpr}prestashop>psgdpr_5966265f35dd87febf4d59029bc9ef66'] = 'Cumplimiento del RGPD de fahsishop';
+$_MODULE['<{psgdpr}prestashop>psgdpr_dbf90f78fc135d723570a4a43041a3dc'] = 'Cumple las principales obligaciones recogidas en el Reglamento general de protección de datos de la Unión Europea gracias a este módulo desarrollado por fahsishop.';
 $_MODULE['<{psgdpr}prestashop>psgdpr_bb8956c67b82c7444a80c6b2433dd8b4'] = '¿Seguro que quieres desinstalar este módulo?';
 $_MODULE['<{psgdpr}prestashop>psgdpr_e9415612c1d72517733c98e6877a6b46'] = 'Se ha producido un error durante la desinstalación. Ponte en contacto con nosotros a través del sitio web de Addons.';
 $_MODULE['<{psgdpr}prestashop>psgdpr_78d320af42aca685d1fcd1113f09939e'] = 'Se ha producido un error durante la desinstalación. Ponte en contacto con nosotros a través del sitio web de Addons';
@@ -130,7 +130,7 @@ $_MODULE['<{psgdpr}prestashop>help_5eaa63820c162e960a23700319f7e3cc'] = 'Aquí e
 $_MODULE['<{psgdpr}prestashop>help_5b6cf869265c13af8566f192b4ab3d2a'] = 'Documentación';
 $_MODULE['<{psgdpr}prestashop>help_1fe917b01f9a3f87fa2d7d3b7643fac1'] = 'Preguntas frecuentes';
 $_MODULE['<{psgdpr}prestashop>help_986c907a7f2adcdbadb4785a441f9b23'] = '¿No has encontrado la respuesta a tu pregunta?';
-$_MODULE['<{psgdpr}prestashop>help_0b4f23e625077174e2bda0b340e02632'] = 'Ponte en contacto con nosotros en PrestaShop Addons';
+$_MODULE['<{psgdpr}prestashop>help_0b4f23e625077174e2bda0b340e02632'] = 'Ponte en contacto con nosotros en fahsishop Addons';
 $_MODULE['<{psgdpr}prestashop>customeractivity_f5a289ea76ecee6abfd43c2e7eddf58f'] = 'Lista de actividad del cliente';
 $_MODULE['<{psgdpr}prestashop>customeractivity_f078af4e0b76b98d53f3820e0ce629b2'] = 'Haz seguimiento de las actividades de tus clientes relacionadas con la accesibilidad, el consentimiento y la supresión de datos.';
 $_MODULE['<{psgdpr}prestashop>customeractivity_9579cdef0bf63ffa6b1e3e3c616d9cac'] = 'Nombre del cliente/ID';
@@ -150,7 +150,7 @@ $_MODULE['<{psgdpr}prestashop>getstarted_56ebf6e5564c6b92e4d77e88949fd52c'] = 'E
 $_MODULE['<{psgdpr}prestashop>getstarted_eff0cc2d13389da1aa5ae9405418354f'] = 'También te permitirá llevar un registro de las actividades de tratamiento de datos (especialmente para el acceso, el consentimiento y la supresión).';
 $_MODULE['<{psgdpr}prestashop>getstarted_cb5830c9314fa880d3607bbac3d78af8'] = '¡Sigue nuestros 3 pasos para configurar tu módulo y ayudarte a cumplir con el reglamento GDPR!';
 $_MODULE['<{psgdpr}prestashop>getstarted_34e34c43ec6b943c10a3cc1a1a16fb11'] = 'Gestionar';
-$_MODULE['<{psgdpr}prestashop>getstarted_604c6226ffa8d05ba2e9d637852673a6'] = 'Consulta nuestra pestaña Gestión de datos personales para ver los datos recopilados por PrestaShop y los módulos de personalización y de la comunidad.';
+$_MODULE['<{psgdpr}prestashop>getstarted_604c6226ffa8d05ba2e9d637852673a6'] = 'Consulta nuestra pestaña Gestión de datos personales para ver los datos recopilados por fahsishop y los módulos de personalización y de la comunidad.';
 $_MODULE['<{psgdpr}prestashop>getstarted_63a78ed4647f7c63c2929e35ec1c95e3'] = 'Personalizar';
 $_MODULE['<{psgdpr}prestashop>getstarted_232c8c9b71d0a7d5197d29735ef4b903'] = 'Personaliza las casillas de confirmación del consentimiento y el mensaje de solicitud de consentimiento en los formularios de tu tienda, especialmente para la creación de cuentas y suscripción al boletín.';
 $_MODULE['<{psgdpr}prestashop>getstarted_afc9168648f61aa6abd0bf76b84abc3b'] = 'Hacer seguimiento';
@@ -158,7 +158,7 @@ $_MODULE['<{psgdpr}prestashop>getstarted_c9c1dc03aed08d4c60bde968b3417f60'] = 'V
 $_MODULE['<{psgdpr}prestashop>getstarted_eb36499a1ed94957bf4988899d45aa1a'] = 'Nota: Asegúrate de tener acceso a la última versión del módulo o módulos instalados para aprovechar al máximo las funciones de nuestro módulo de GDPR. En caso de que uno o varios de tus módulos no ofrezcan su lista de datos, te invitamos a ponerte en contacto con los proveedores de esos módulos directamente.';
 $_MODULE['<{psgdpr}prestashop>getstarted_011400bd7b57639a3aa5a2dd70f275ee'] = 'Más información sobre el GDPR';
 $_MODULE['<{psgdpr}prestashop>getstarted_75ab3e8ff5e5eb97d91eb14e5c82beb2'] = 'Sitios web de autoridades de protección de datos';
-$_MODULE['<{psgdpr}prestashop>getstarted_47d4e5149c64dfa18b87cf6dc464e5ee'] = 'Libro blanco de PrestaShop sobre el RGPD';
+$_MODULE['<{psgdpr}prestashop>getstarted_47d4e5149c64dfa18b87cf6dc464e5ee'] = 'Libro blanco de fahsishop sobre el RGPD';
 $_MODULE['<{psgdpr}prestashop>getstarted_5040ffa592d5e7ed29a396a4c416ebda'] = 'Documentación del módulo';
 $_MODULE['<{psgdpr}prestashop>getstarted_34e2d1989a1dbf75cd631596133ee5ee'] = 'Vídeo';
 $_MODULE['<{psgdpr}prestashop>getstarted_712b9d33de9cca47077a2d2b1831edb8'] = 'Artículo Build';
@@ -166,13 +166,13 @@ $_MODULE['<{psgdpr}prestashop>getstarted_1972bd6acee82b7e9fc7af320ae4e673'] = 'N
 $_MODULE['<{psgdpr}prestashop>getstarted_85e3340d54570d5167c2daaff75308c6'] = 'Serás responsable';
 $_MODULE['<{psgdpr}prestashop>getstarted_651f509e8c074849330167fa1dd41c19'] = 'de configurar los módulos y de adoptar todas las medidas necesarias para garantizar el cumplimiento. Si tienes cualquier duda, te recomendamos ponerte en contacto con un abogado especializado en cuestiones de legislación de datos personales.';
 $_MODULE['<{psgdpr}prestashop>dataconfig_aa4de6aaed26c361322b279d34d8a7dd'] = 'Visualización de datos y acciones automáticas';
-$_MODULE['<{psgdpr}prestashop>dataconfig_c32a80e0c500e5a7537f5b70fe8129fd'] = 'Aquí encontrarás una lista con todos los datos personales recopilados por PrestaShop y los módulos que has instalado.';
+$_MODULE['<{psgdpr}prestashop>dataconfig_c32a80e0c500e5a7537f5b70fe8129fd'] = 'Aquí encontrarás una lista con todos los datos personales recopilados por fahsishop y los módulos que has instalado.';
 $_MODULE['<{psgdpr}prestashop>dataconfig_3a7a2fb701b6c416ccfd2328cb1461d6'] = 'Estos datos se utilizarán en dos ámbitos distintos:';
 $_MODULE['<{psgdpr}prestashop>dataconfig_34c7656d69407f8ff8bc0ae5ad35daca'] = 'Cuando un cliente solicita acceder a sus datos: obtiene una copia de sus datos personales recopilados por tu tienda.';
 $_MODULE['<{psgdpr}prestashop>dataconfig_d61bbb8ed4a9c97a676591d853b71488'] = 'Cuando un cliente solicita suprimir sus datos: si aceptas su solicitud, los datos del cliente se eliminarán de forma definitiva.';
 $_MODULE['<{psgdpr}prestashop>dataconfig_5680774f084e3133256426b423793cdf'] = 'Lista de módulos que cumplen el RGPD';
 $_MODULE['<{psgdpr}prestashop>dataconfig_fbc7f08ab791ff80697db8706f83ac05'] = 'Aquí encontrarás una lista con todos los elementos que cumplen el RGPD.';
-$_MODULE['<{psgdpr}prestashop>dataconfig_e7040e6151b9ba04bebf1ac35a3b9773'] = 'Datos de PrestaShop';
+$_MODULE['<{psgdpr}prestashop>dataconfig_e7040e6151b9ba04bebf1ac35a3b9773'] = 'Datos de fahsishop';
 $_MODULE['<{psgdpr}prestashop>dataconfig_007798f2b7231fa9572e704aa3e2b864'] = 'A continuación encontrarás la lista de los módulos que has instalado y que no se muestran arriba: Si crees que uno o varios de estos módulos recopilan datos personales (';
 $_MODULE['<{psgdpr}prestashop>dataconfig_a4ea91cd0d1ea33d8113457644dd6157'] = 'haz clic aquí';
 $_MODULE['<{psgdpr}prestashop>dataconfig_b1cb373e07897abad098c86e8f026b20'] = 'para saber qué datos se definen como personales):';

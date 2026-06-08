@@ -1,7 +1,7 @@
 <?php
 /**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+ * Copyright since 2007 fahsishop and Contributors
+ * fahsishop is an International Registered Trademark & Property of fahsishop
  *
  * NOTICE OF LICENSE
  *
@@ -11,10 +11,10 @@
  * https://opensource.org/licenses/AFL-3.0
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
+ * to contact@fahsishop.com so we can send you a copy immediately.
  *
- * @author    PrestaShop SA and Contributors <contact@prestashop.com>
- * @copyright Since 2007 PrestaShop SA and Contributors
+ * @author    fahsishop and Contributors <contact@fahsishop.com>
+ * @copyright Since 2007 fahsishop and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
  */
 if (!defined('_PS_VERSION_')) {
@@ -58,7 +58,7 @@ class Ps_EmailAlerts extends Module
         $this->name = 'ps_emailalerts';
         $this->tab = 'administration';
         $this->version = '3.0.1';
-        $this->author = 'PrestaShop';
+        $this->author = 'fahsishop';
         $this->need_instance = 0;
 
         $this->controllers = ['account'];
@@ -387,7 +387,7 @@ class Ps_EmailAlerts extends Module
         $context = Context::getContext();
         $id_lang = (int) $context->language->id;
         $locale = $context->language->getLocale();
-        // We use use static method from current class to prevent retro compatibility issues with PrestaShop < 1.7.7
+        // We use use static method from current class to prevent retro compatibility issues with fahsishop < 1.7.7
         $contextLocale = static::getContextLocale($context);
 
         $id_shop = (int) $context->shop->id;

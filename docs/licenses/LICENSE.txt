@@ -1,4 +1,4 @@
-Copyright (c) Since 2007 PrestaShop.
+Copyright (c) Since 2007 fahsishop.
 
 Open Software License v. 3.0 (OSL-3.0)
 

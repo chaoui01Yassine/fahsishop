@@ -1,7 +1,7 @@
 <?php
 /**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+ * Copyright since 2007 fahsishop and Contributors
+ * fahsishop is an International Registered Trademark & Property of fahsishop
  *
  * NOTICE OF LICENSE
  *
@@ -11,16 +11,16 @@
  * https://opensource.org/licenses/OSL-3.0
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
+ * to contact@fahsishop.com so we can send you a copy immediately.
  *
  * DISCLAIMER
  *
- * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
- * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to https://devdocs.prestashop.com/ for more information.
+ * Do not edit or add to this file if you wish to upgrade fahsishop to newer
+ * versions in the future. If you wish to customize fahsishop for your
+ * needs please refer to https://fahsishop.com/ for more information.
  *
- * @author    PrestaShop SA and Contributors <contact@prestashop.com>
- * @copyright Since 2007 PrestaShop SA and Contributors
+ * @author    fahsishop and Contributors <contact@fahsishop.com>
+ * @copyright Since 2007 fahsishop and Contributors
  * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
 
@@ -62,9 +62,9 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new ApiPlatform\Symfony\Bundle\ApiPlatformBundle(),
-            // PrestaShop Core bundle
+            // fahsishop Core bundle
             new PrestaShopBundle\PrestaShopBundle(),
-            // PrestaShop Translation parser
+            // fahsishop Translation parser
             new TranslationToolsBundle(),
             new League\Tactician\Bundle\TacticianBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
@@ -75,7 +75,7 @@ class AppKernel extends Kernel
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
         }
 
-        /* Will not work until PrestaShop is installed */
+        /* Will not work until fahsishop is installed */
         $activeModules = $this->getActiveModules();
         if (!empty($activeModules)) {
             try {
@@ -147,7 +147,7 @@ class AppKernel extends Kernel
     }
 
     /**
-     * The kernel and especially its container is cached in several PrestaShop classes, services or components So we
+     * The kernel and especially its container is cached in several fahsishop classes, services or components So we
      * need to clear this cache everytime the kernel is shutdown, rebooted, reset, ...
      *
      * This is very important in test environment to avoid invalid mocks to stay accessible and used, but it's also

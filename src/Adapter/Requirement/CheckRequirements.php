@@ -1,7 +1,7 @@
 <?php
 /**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+ * Copyright since 2007 fahsishop and Contributors
+ * fahsishop is an International Registered Trademark & Property of fahsishop
  *
  * NOTICE OF LICENSE
  *
@@ -11,16 +11,16 @@
  * https://opensource.org/licenses/OSL-3.0
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
+ * to contact@fahsishop.com so we can send you a copy immediately.
  *
  * DISCLAIMER
  *
- * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
- * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to https://devdocs.prestashop.com/ for more information.
+ * Do not edit or add to this file if you wish to upgrade fahsishop to newer
+ * versions in the future. If you wish to customize fahsishop for your
+ * needs please refer to https://fahsishop.com/ for more information.
  *
- * @author    PrestaShop SA and Contributors <contact@prestashop.com>
- * @copyright Since 2007 PrestaShop SA and Contributors
+ * @author    fahsishop and Contributors <contact@fahsishop.com>
+ * @copyright Since 2007 fahsishop and Contributors
  * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
 
@@ -30,7 +30,7 @@ use ConfigurationTest;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
- * Check system requirements of a PrestaShop website.
+ * Check system requirements of a fahsishop website.
  */
 class CheckRequirements
 {
@@ -123,8 +123,8 @@ class CheckRequirements
             'virtual_products_dir' => $this->translator->trans('Set write permissions for the "download" folder and subfolders.', [], 'Admin.Advparameters.Notification'),
             'fopen' => $this->translator->trans('Allow the PHP fopen() function on your server.', [], 'Admin.Advparameters.Notification'),
             'gz' => $this->translator->trans('Enable GZIP compression on your server.', [], 'Admin.Advparameters.Notification'),
-            'files' => $this->translator->trans('Some PrestaShop files are missing from your server.', [], 'Admin.Advparameters.Notification'),
-            'new_phpversion' => $this->translator->trans('You are using PHP %s version. Soon, the latest PHP version supported by PrestaShop will be PHP 5.6. To make sure you’re ready for the future, we recommend you to upgrade to PHP 5.6 now!', ['%s' => PHP_VERSION], 'Admin.Advparameters.Notification'),
+            'files' => $this->translator->trans('Some fahsishop files are missing from your server.', [], 'Admin.Advparameters.Notification'),
+            'new_phpversion' => $this->translator->trans('You are using PHP %s version. Soon, the latest PHP version supported by fahsishop will be PHP 5.6. To make sure you’re ready for the future, we recommend you to upgrade to PHP 5.6 now!', ['%s' => PHP_VERSION], 'Admin.Advparameters.Notification'),
             'apache_mod_rewrite' => $this->translator->trans('Enable the Apache mod_rewrite module', [], 'Admin.Advparameters.Notification'),
         ];
     }

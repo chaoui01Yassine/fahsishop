@@ -32,7 +32,7 @@
 				array_index: group_position,
 				group: true,
 				label: group.label,
-				classes: group.className, // PrestaShop
+				classes: group.className, // fahsishop
 				children: 0,
 				disabled: group.disabled
 			});
@@ -518,7 +518,7 @@
 		Chosen.prototype.result_add_group = function(group) {
 			if (!group.disabled) {
 				group.dom_id = this.container_id + "_g_" + group.array_index;
-				return '<li id="' + group.dom_id + '" class="group-result '+group.classes+'">' + $("<div />").text(group.label).html() + '</li>'; // PrestaShop
+				return '<li id="' + group.dom_id + '" class="group-result '+group.classes+'">' + $("<div />").text(group.label).html() + '</li>'; // fahsishop
 			} else {
 				return "";
 			}

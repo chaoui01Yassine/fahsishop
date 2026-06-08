@@ -1,7 +1,7 @@
 <?php
 /**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+ * Copyright since 2007 fahsishop and Contributors
+ * fahsishop is an International Registered Trademark & Property of fahsishop
  *
  * NOTICE OF LICENSE
  *
@@ -11,16 +11,16 @@
  * https://opensource.org/licenses/OSL-3.0
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
+ * to contact@fahsishop.com so we can send you a copy immediately.
  *
  * DISCLAIMER
  *
- * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
- * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to https://devdocs.prestashop.com/ for more information.
+ * Do not edit or add to this file if you wish to upgrade fahsishop to newer
+ * versions in the future. If you wish to customize fahsishop for your
+ * needs please refer to https://fahsishop.com/ for more information.
  *
- * @author    PrestaShop SA and Contributors <contact@prestashop.com>
- * @copyright Since 2007 PrestaShop SA and Contributors
+ * @author    fahsishop and Contributors <contact@fahsishop.com>
+ * @copyright Since 2007 fahsishop and Contributors
  * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
 
@@ -58,16 +58,16 @@ class StockManager
     {
         /** @TODO We should call the needed classes with the Symfony dependency injection instead of the Homemade Service Locator */
         $serviceLocator = new ServiceLocator();
-        $configuration = $serviceLocator::get('\\PrestaShop\\PrestaShop\\Core\\ConfigurationInterface');
+        $configuration = $serviceLocator::get('\\PrestaShop\PrestaShop\Core\\ConfigurationInterface');
 
         if ($product->pack_stock_type == Pack::STOCK_TYPE_PRODUCTS_ONLY
             || $product->pack_stock_type == Pack::STOCK_TYPE_PACK_BOTH
             || ($product->pack_stock_type == Pack::STOCK_TYPE_DEFAULT
                 && $configuration->get('PS_PACK_STOCK_TYPE') > 0)
         ) {
-            $packItemsManager = $serviceLocator::get('\\PrestaShop\\PrestaShop\\Adapter\\Product\\PackItemsManager');
-            $stockManager = $serviceLocator::get('\\PrestaShop\\PrestaShop\\Adapter\\StockManager');
-            $cacheManager = $serviceLocator::get('\\PrestaShop\\PrestaShop\\Adapter\\CacheManager');
+            $packItemsManager = $serviceLocator::get('\\PrestaShop\PrestaShop\Adapter\Product\PackItemsManager');
+            $stockManager = $serviceLocator::get('\\PrestaShop\PrestaShop\Adapter\\StockManager');
+            $cacheManager = $serviceLocator::get('\\PrestaShop\PrestaShop\Adapter\\CacheManager');
 
             $products_pack = $packItemsManager->getPackItems($product);
             foreach ($products_pack as $product_pack) {
@@ -107,10 +107,10 @@ class StockManager
         /** @TODO We should call the needed classes with the Symfony dependency injection instead of the Homemade Service Locator */
         $serviceLocator = new ServiceLocator();
 
-        $configuration = $serviceLocator::get('\\PrestaShop\\PrestaShop\\Core\\ConfigurationInterface');
-        $packItemsManager = $serviceLocator::get('\\PrestaShop\\PrestaShop\\Adapter\\Product\\PackItemsManager');
-        $stockManager = $serviceLocator::get('\\PrestaShop\\PrestaShop\\Adapter\\StockManager');
-        $cacheManager = $serviceLocator::get('\\PrestaShop\\PrestaShop\\Adapter\\CacheManager');
+        $configuration = $serviceLocator::get('\\PrestaShop\PrestaShop\Core\\ConfigurationInterface');
+        $packItemsManager = $serviceLocator::get('\\PrestaShop\PrestaShop\Adapter\Product\PackItemsManager');
+        $stockManager = $serviceLocator::get('\\PrestaShop\PrestaShop\Adapter\\StockManager');
+        $cacheManager = $serviceLocator::get('\\PrestaShop\PrestaShop\Adapter\\CacheManager');
 
         $packs = $packItemsManager->getPacksContainingItem($product, $id_product_attribute);
         foreach ($packs as $pack) {
@@ -153,10 +153,10 @@ class StockManager
     {
         /** @TODO We should call the needed classes with the Symfony dependency injection instead of the Homemade Service Locator */
         $serviceLocator = new ServiceLocator();
-        $stockManager = $serviceLocator::get('\\PrestaShop\\PrestaShop\\Adapter\\StockManager');
-        $packItemsManager = $serviceLocator::get('\\PrestaShop\\PrestaShop\\Adapter\\Product\\PackItemsManager');
-        $cacheManager = $serviceLocator::get('\\PrestaShop\\PrestaShop\\Adapter\\CacheManager');
-        $hookManager = $serviceLocator::get('\\PrestaShop\\PrestaShop\\Adapter\\HookManager');
+        $stockManager = $serviceLocator::get('\\PrestaShop\PrestaShop\Adapter\\StockManager');
+        $packItemsManager = $serviceLocator::get('\\PrestaShop\PrestaShop\Adapter\Product\PackItemsManager');
+        $cacheManager = $serviceLocator::get('\\PrestaShop\PrestaShop\Adapter\\CacheManager');
+        $hookManager = $serviceLocator::get('\\PrestaShop\PrestaShop\Adapter\\HookManager');
 
         $stockAvailable = $stockManager->getStockAvailableByProduct($product, $id_product_attribute, $id_shop);
 
@@ -384,7 +384,7 @@ class StockManager
         $product = new Product($productId);
 
         if ($product->id) {
-            $stockManager = ServiceLocator::get('\\PrestaShop\\PrestaShop\\Adapter\\StockManager');
+            $stockManager = ServiceLocator::get('\\PrestaShop\PrestaShop\Adapter\\StockManager');
             $stockAvailable = $stockManager->getStockAvailableByProduct($product, $productAttributeId, $params['id_shop'] ?? null);
 
             if ($stockAvailable->id) {

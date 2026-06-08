@@ -1,0 +1,444 @@
+<?php
+/**
+ * Mollie       https://www.mollie.nl
+ *
+ * @author      Mollie B.V. <info@mollie.nl>
+ * @copyright   Mollie B.V.
+ * @license     https://github.com/mollie/PrestaShop/blob/master/LICENSE.md
+ *
+ * @see        https://github.com/mollie/PrestaShop
+ * @codingStandardsIgnoreStart
+ */
+
+use Mollie\Api\Types\PaymentMethod;
+use Mollie\Api\Types\PaymentStatus;
+use Mollie\Config\Config;
+use Mollie\Controller\AbstractMollieController;
+use Mollie\Factory\CustomerFactory;
+use Mollie\Handler\Order\OrderPendingStatusHandler;
+use Mollie\Logger\Logger;
+use Mollie\Logger\LoggerInterface;
+use Mollie\Repository\PaymentMethodRepository;
+use Mollie\Service\MailService;
+use Mollie\Service\PayByBankCancellationService;
+use Mollie\Service\PaymentReturnService;
+use Mollie\Utility\ArrayUtility;
+use Mollie\Utility\ExceptionUtility;
+use Mollie\Utility\TransactionUtility;
+use Mollie\Validator\OrderCallBackValidator;
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
+require_once dirname(__FILE__) . '/../../mollie.php';
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
+class MollieReturnModuleFrontController extends AbstractMollieController
+{
+    /** @var Mollie */
+    public $module;
+
+    private const FILE_NAME = 'return';
+
+    /** @var bool */
+    public $ssl = true;
+
+    /**
+     * @throws PrestaShopDatabaseException
+     * @throws PrestaShopException
+     * @throws SmartyException
+     */
+    public function initContent()
+    {
+        /** @var Logger $logger * */
+        $logger = $this->module->getService(LoggerInterface::class);
+
+        $logger->debug(sprintf('%s - Controller called', self::FILE_NAME));
+
+        $idCart = (int) Tools::getValue('cart_id');
+        $key = Tools::getValue('key');
+        $orderNumber = Tools::getValue('order_number');
+        $transactionId = Tools::getValue('transaction_id');
+        $context = Context::getContext();
+        $customer = $context->customer;
+
+        /** @var OrderCallBackValidator $orderCallBackValidator */
+        $orderCallBackValidator = $this->module->getService(OrderCallBackValidator::class);
+
+        if (!$orderCallBackValidator->validate($key, $idCart)) {
+            Tools::redirect('index.php');
+        }
+
+        /** @var CustomerFactory $customerFactory */
+        $customerFactory = $this->module->getService(CustomerFactory::class);
+        $this->context = $customerFactory->recreateFromRequest($customer->id, $key, $this->context);
+        if (Tools::getValue('ajax')) {
+            $this->processAjax();
+            exit;
+        }
+
+        parent::initContent();
+
+        $data = [];
+        $cart = null;
+
+        /** @var PaymentMethodRepository $paymentMethodRepo */
+        $paymentMethodRepo = $this->module->getService(PaymentMethodRepository::class);
+        if (Tools::getIsset('cart_id')) {
+            $idCart = (int) Tools::getValue('cart_id');
+
+            // Check if user that's seeing this is the cart-owner
+            $cart = new Cart($idCart);
+            $data['auth'] = (int) $cart->id_customer === $customer->id;
+            if ($data['auth']) {
+                if ($transactionId) {
+                    $data['mollie_info'] = $paymentMethodRepo->getPaymentBy('transaction_id', (string) $transactionId);
+                } else {
+                    $data['mollie_info'] = $paymentMethodRepo->getPaymentBy('order_reference', (string) $orderNumber);
+                }
+            }
+        }
+
+        if (isset($data['auth']) && $data['auth']) {
+            if (false === $data['mollie_info']) {
+                $orderId = (int) Order::getIdByCartId($idCart);
+                $data['mollie_info'] = $orderId != 0 ? $paymentMethodRepo->getPaymentBy('order_id', $orderId) : [];
+            }
+            if (false === $data['mollie_info'] || empty($data['mollie_info'])) {
+                $data['mollie_info'] = $paymentMethodRepo->getPaymentBy('cart_id', $idCart);
+            }
+            if (false === $data['mollie_info']) {
+                $data['mollie_info'] = [];
+                //NOTE: information instead of error as this might occur due to cancellation of the payment
+                $logger->debug(sprintf('%s - Unable to find order in first try', self::FILE_NAME));
+
+                $data['msg_details'] = $this->module->l('Your payment was not successful. Try again.', self::FILE_NAME);
+                $this->setWarning($data['msg_details']);
+
+                Tools::redirect($this->context->link->getPageLink(
+                        'cart',
+                        true,
+                        [
+                            'action' => 'show',
+                            'checkout' => true,
+                        ]
+                    )
+                );
+            } elseif (isset($data['mollie_info']['method'])
+                && PaymentMethod::BANKTRANSFER === $data['mollie_info']['method']
+                && PaymentStatus::STATUS_OPEN === $data['mollie_info']['bank_status']
+            ) {
+                $this->redirectToOrderConfirmation($idCart, $cart);
+            } elseif (isset($data['mollie_info']['method'])
+                && $data['mollie_info']['method'] === Config::PAY_BY_BANK
+            ) {
+                /** @var PayByBankCancellationService $payByBankService */
+                $payByBankService = $this->module->getService(PayByBankCancellationService::class);
+                $transactionId = $data['mollie_info']['transaction_id'];
+                $dbStatus = $data['mollie_info']['bank_status'];
+
+                $statusToCheck = $dbStatus;
+
+                if (in_array($dbStatus, [PaymentStatus::STATUS_OPEN, PaymentStatus::STATUS_PENDING], true)) {
+                    $statusToCheck = $payByBankService->getActualMollieStatus($transactionId);
+                }
+
+                if ($payByBankService->shouldCancelPayment($statusToCheck)) {
+                    $payByBankService->cancelOrderAndRestoreCart($idCart, $transactionId, $payByBankService->resolveCancelStatus($statusToCheck));
+                    $this->setWarning($this->module->l('Your payment was not successful. Please try again.', self::FILE_NAME));
+                    Tools::redirect($this->context->link->getPageLink(
+                        'order',
+                        true,
+                        $this->context->language->id,
+                        [
+                            'step' => 'payment',
+                        ]
+                    ));
+                }
+
+                $this->redirectToOrderConfirmation($idCart, $cart);
+            } elseif (
+                isset($data['mollie_info']['bank_status'])
+                && in_array($data['mollie_info']['bank_status'], [PaymentStatus::STATUS_OPEN, PaymentStatus::STATUS_PENDING], true)
+            ) {
+                /** @var OrderPendingStatusHandler $pendingStatusHandler */
+                $pendingStatusHandler = $this->module->getService(OrderPendingStatusHandler::class);
+                $pendingAction = $pendingStatusHandler->handle($data['mollie_info']['transaction_id'], $idCart);
+
+                switch ($pendingAction) {
+                    case OrderPendingStatusHandler::ACTION_PENDING:
+                        $data['msg_title'] = $this->module->l('Your order has been received', self::FILE_NAME);
+                        $data['msg_details'] = $this->module->l('Your payment is currently being processed. You will receive a confirmation once the payment is complete. You can check the status of your order in your account.', self::FILE_NAME);
+                        break;
+                    case OrderPendingStatusHandler::ACTION_FAILED:
+                        $this->setWarning($this->module->l('Your payment was not successful. Try again.', self::FILE_NAME));
+                        Tools::redirect($this->context->link->getPageLink(
+                            'cart',
+                            null,
+                            $this->context->language->id,
+                            [
+                                'action' => 'show',
+                                'checkout' => true,
+                            ]
+                        ));
+                        break;
+                    default:
+                        $data['wait'] = true;
+                        break;
+                }
+            } else {
+                $data['wait'] = true;
+            }
+        } else {
+            // Not allowed? Don't make query but redirect.
+            $data['mollie_info'] = [];
+            $data['msg_details'] = $this->module->l('You\'re not authorised to see this page.', self::FILE_NAME);
+            Tools::redirect(Context::getContext()->link->getPageLink('index', true));
+        }
+
+        $this->context->smarty->assign($data);
+        $this->context->smarty->assign('link', $this->context->link);
+
+        if (!empty($data['wait'])) {
+            $this->context->smarty->assign(
+                'checkStatusEndpoint',
+                $this->context->link->getModuleLink(
+                    $this->module->name,
+                    'return',
+                    [
+                        'ajax' => 1,
+                        'action' => 'getStatus',
+                        'transaction_id' => $data['mollie_info']['transaction_id'] ?? null,
+                        'key' => $key,
+                        'cart_id' => $idCart,
+                        'order_number' => $orderNumber,
+                    ],
+                    true
+                )
+            );
+            $this->setTemplate('mollie_wait.tpl');
+        } else {
+            $this->setTemplate('mollie_return.tpl');
+        }
+
+        $logger->debug(sprintf('%s - Controller action ended', self::FILE_NAME));
+    }
+
+    /**
+     * Prepend module path if PS version >= 1.7.
+     *
+     * @param string $template
+     * @param array $params
+     * @param string|null $locale
+     *
+     * @throws PrestaShopException
+     *
+     * @since 3.3.2
+     */
+    public function setTemplate($template, $params = [], $locale = null)
+    {
+        if (version_compare(_PS_VERSION_, '1.7.0.0', '>=')) {
+            $template = "module:mollie/views/templates/front/17_{$template}";
+        }
+
+        /* @phpstan-ignore-next-line */
+        parent::setTemplate($template, $params, $locale);
+    }
+
+    /**
+     * @throws PrestaShopException
+     * @throws SmartyException
+     */
+    protected function processAjax()
+    {
+        if (empty($this->context->customer->id)) {
+            return;
+        }
+
+        switch (Tools::getValue('action')) {
+            case 'getStatus':
+                $this->processGetStatus();
+                break;
+        }
+
+        exit;
+    }
+
+    /**
+     * @throws PrestaShopDatabaseException
+     * @throws PrestaShopException
+     */
+    protected function processGetStatus()
+    {
+        header('Content-Type: application/json;charset=UTF-8');
+
+        $notSuccessfulPaymentMessage = $this->module->l('Your payment was not successful. Try again.', self::FILE_NAME);
+        $wrongAmountMessage = $this->module->l('The payment failed because the order and payment amounts are different. Try again.', self::FILE_NAME);
+
+        if (Tools::getValue('failed')) {
+            /** @var MailService $mailService */
+            $mailService = $this->module->getService(MailService::class);
+
+            try {
+                $mailService->sendFailedPaymentMail($this->context->customer);
+            } catch (\Throwable $e) {
+                /** @var Logger $logger */
+                $logger = $this->module->getService(LoggerInterface::class);
+
+                $logger->error(sprintf('%s - Error sending failed payment mail', self::FILE_NAME), [
+                        'exceptions' => ExceptionUtility::getExceptions($e),
+                ]);
+            }
+
+            $this->setWarning($notSuccessfulPaymentMessage);
+
+            Tools::redirect($this->context->link->getPageLink(
+                'cart',
+                null,
+                $this->context->language->id,
+                [
+                    'action' => 'show',
+                    'checkout' => true,
+                ]
+            ));
+        }
+
+        /** @var PaymentMethodRepository $paymentMethodRepo */
+        $paymentMethodRepo = $this->module->getService(PaymentMethodRepository::class);
+
+        $cartId = (int) Tools::getValue('cart_id');
+        $orderId = (int) Order::getIdByCartId($cartId);
+        $dbPayment = $data['mollie_info'] = $orderId != 0 ? $paymentMethodRepo->getPaymentBy('order_id', (int) $orderId) : [];
+
+        if (!$dbPayment && $orderId) {
+            $dbPayment = $data['mollie_info'] = $paymentMethodRepo->getPaymentBy('cart_id', $cartId);
+        }
+
+        if (!$dbPayment) {
+            exit(json_encode([
+                'success' => false,
+            ]));
+        }
+        if (!isset($dbPayment['cart_id']) || !Validate::isLoadedObject($cart = new Cart($dbPayment['cart_id']))) {
+            exit(json_encode([
+                'success' => false,
+            ]));
+        }
+
+        $transactionId = Tools::getValue('transaction_id') ?: $data['mollie_info']['transaction_id'];
+
+        $order = new Order((int) $orderId);
+
+        if ((int) $cart->id_customer !== (int) $this->context->customer->id) {
+            exit(json_encode([
+                'success' => false,
+            ]));
+        }
+
+        if (!Tools::isSubmit('module')) {
+            $_GET['module'] = $this->module->name;
+        }
+
+        $isOrder = TransactionUtility::isOrderTransaction($transactionId);
+        if ($isOrder) {
+            $transaction = $this->module->getApiClient()->orders->get($transactionId, ['embed' => 'payments']);
+        } else {
+            $transaction = $this->module->getApiClient()->payments->get($transactionId);
+        }
+
+        $orderStatus = $transaction->status;
+
+        if ('order' === $transaction->resource) {
+            $payments = ArrayUtility::getLastElement($transaction->_embedded->payments);
+            $orderStatus = $payments->status;
+        }
+
+        /** @var PaymentReturnService $paymentReturnService */
+        $paymentReturnService = $this->module->getService(PaymentReturnService::class);
+
+        switch ($orderStatus) {
+            case PaymentStatus::STATUS_OPEN:
+            case PaymentStatus::STATUS_PENDING:
+                if ($transaction->mode === 'test') {
+                    $this->setWarning($this->module->l('We have not received a definite payment status. You will be notified as soon as we receive a confirmation of the bank/merchant.', self::FILE_NAME));
+                    $response = $paymentReturnService->handleTestPendingStatus();
+                    break;
+                }
+                $response = $paymentReturnService->handleStatus(
+                    $order,
+                    $transaction,
+                    $paymentReturnService::PENDING
+                );
+                break;
+            case PaymentStatus::STATUS_PAID:
+            case PaymentStatus::STATUS_AUTHORIZED:
+                $transactionInfo = $paymentMethodRepo->getPaymentBy('transaction_id', $transaction->id);
+            if ($transaction->resource === Config::MOLLIE_API_STATUS_PAYMENT && $transaction->hasRefunds()) {
+                if (isset($transactionInfo['reason']) && $transactionInfo['reason'] === Config::WRONG_AMOUNT_REASON) {
+                    $this->setWarning($wrongAmountMessage);
+                } else {
+                    $this->setWarning($notSuccessfulPaymentMessage);
+                }
+                $response = $paymentReturnService->handleFailedStatus($transaction);
+                break;
+            }
+
+            if (isset($transactionInfo['reason']) && $transactionInfo['reason'] === Config::WRONG_AMOUNT_REASON) {
+                $this->setWarning($wrongAmountMessage);
+                $response = $paymentReturnService->handleFailedStatus($transaction);
+                break;
+            }
+            $response = $paymentReturnService->handleStatus(
+                    $order,
+                    $transaction,
+                    $paymentReturnService::DONE
+                );
+                break;
+            case PaymentStatus::STATUS_EXPIRED:
+            case PaymentStatus::STATUS_CANCELED:
+            case PaymentStatus::STATUS_FAILED:
+                $transactionInfo = $paymentMethodRepo->getPaymentBy('transaction_id', $transaction->id);
+                if (isset($transactionInfo['reason']) && $transactionInfo['reason'] === Config::WRONG_AMOUNT_REASON) {
+                    $this->setWarning($wrongAmountMessage);
+                } else {
+                    $this->setWarning($notSuccessfulPaymentMessage);
+                }
+
+                $response = $paymentReturnService->handleFailedStatus($transaction);
+                break;
+            default:
+                exit();
+        }
+
+        exit(json_encode($response));
+    }
+
+    private function setWarning($message)
+    {
+        /* @phpstan-ignore-next-line */
+        $this->warning[] = $message;
+
+        $this->context->cookie->__set('mollie_payment_canceled_error', json_encode($this->warning));
+    }
+
+    private function redirectToOrderConfirmation($idCart, Cart $cart)
+    {
+        $orderId = (int) Order::getIdByCartId($idCart);
+        Tools::redirect($this->context->link->getPageLink(
+                'order-confirmation',
+                true,
+                null,
+                [
+                    'id_cart' => (int) $idCart,
+                    'id_module' => (int) $this->module->id,
+                    'id_order' => $orderId,
+                    'key' => $cart->secure_key,
+                ]
+            )
+        );
+    }
+}

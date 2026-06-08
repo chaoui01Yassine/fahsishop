@@ -1,6 +1,6 @@
 {**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+ * Copyright since 2007 fahsishop and Contributors
+ * fahsishop is an International Registered Trademark & Property of fahsishop
  *
  * NOTICE OF LICENSE
  *
@@ -10,10 +10,10 @@
  * https://opensource.org/licenses/AFL-3.0
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
+ * to contact@fahsishop.com so we can send you a copy immediately.
  *
- * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright Since 2007 PrestaShop SA and Contributors
+ * @author    fahsishop <contact@fahsishop.com>
+ * @copyright Since 2007 fahsishop and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
 
@@ -23,7 +23,7 @@
     </h3>
     <form method="post" action="{$moduleAdminLink|escape:'htmlall':'UTF-8'}&page=account" class="form-horizontal">
         <div>
-            <p>{l s='Find here listed all personal data collected by PrestaShop and your installed modules.' mod='psgdpr'}</p>
+            <p>{l s='Find here listed all personal data collected by fahsishop and your installed modules.' mod='psgdpr'}</p>
             <p>{l s='These data will be used at 2 different levels :' mod='psgdpr'}</p>
             <ul>
                 <li>{l s='When a customer requests access to his data: he gets a copy of his personal data collected on your store.' mod='psgdpr'}</li>
@@ -41,10 +41,10 @@
                     <div class="module-card">
                         <div class="module-card-content">
                             <div class="module-card-img">
-                                <img src="{$img_path|escape:'htmlall':'UTF-8'}PrestaShop_logo_puffin.png" width="45" heigh="45">
+                                <img src="{$img_path|escape:'htmlall':'UTF-8'}fahsishop_logo_puffin.png" width="45" heigh="45">
                             </div>
                             <div class="module-card-title">
-                                <span>{l s='PrestaShop data' mod='psgdpr'}</span>
+                                <span>{l s='fahsishop data' mod='psgdpr'}</span>
                             </div>
                         </div>
                     </div>

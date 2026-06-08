@@ -1,7 +1,7 @@
 <?php
 /**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+ * Copyright since 2007 fahsishop and Contributors
+ * fahsishop is an International Registered Trademark & Property of fahsishop
  *
  * NOTICE OF LICENSE
  *
@@ -11,10 +11,10 @@
  * https://opensource.org/licenses/AFL-3.0
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
+ * to contact@fahsishop.com so we can send you a copy immediately.
  *
- * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright Since 2007 PrestaShop SA and Contributors
+ * @author    fahsishop <contact@fahsishop.com>
+ * @copyright Since 2007 fahsishop and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  */
 
@@ -42,7 +42,7 @@ class AttributeGroup extends AbstractHook
     /**
      * Hook for modifying attribute group form formBuilder
      *
-     * @since PrestaShop 9.0.0
+     * @since fahsishop 9.0.0
      *
      * @param array $params
      */
@@ -55,7 +55,7 @@ class AttributeGroup extends AbstractHook
     /**
      * Hook that provides extra data in the form.
      *
-     * @since PrestaShop 9.0.0
+     * @since fahsishop 9.0.0
      *
      * @param array $params
      */
@@ -70,7 +70,7 @@ class AttributeGroup extends AbstractHook
     /**
      * Hook after creation form is handled in migrated page.
      *
-     * @since PrestaShop 9.0.0
+     * @since fahsishop 9.0.0
      *
      * @param array $params
      */
@@ -82,7 +82,7 @@ class AttributeGroup extends AbstractHook
     /**
      * Hook after edition form is handled in migrated page.
      *
-     * @since PrestaShop 9.0.0
+     * @since fahsishop 9.0.0
      *
      * @param array $params
      */

@@ -1,0 +1,64 @@
+{#**
+ * Mollie       https://www.mollie.nl
+ *
+ * @author      Mollie B.V. <info@mollie.nl>
+ * @copyright   Mollie B.V.
+ * @license     https://github.com/mollie/PrestaShop/blob/master/LICENSE.md
+ *
+ * @see        https://github.com/mollie/PrestaShop
+ * @codingStandardsIgnoreStart
+ *#}
+
+{% import '@PrestaShop/Admin/macros.html.twig' as ps %}
+
+{% set subscriptionOptions = subscriptionOptionsForm %}
+
+{% if subscriptionOptionsForm.subscription_options is defined and subscriptionOptionsForm.subscription_options %}
+  {% set subscriptionOptions = subscriptionOptionsForm.subscription_options %}
+{% endif %}
+
+{% block subscription_options %}
+  <div class="row">
+    <div class="col">
+      {{ form_start(subscriptionOptionsForm, {method: 'POST', action: path('admin_subscription_options_submit'), attr: {id: 'subscription-options'}}) }}
+      <div class="card">
+        <h3 class="card-header d-flex justify-content-between align-items-center">
+          <span>
+            {{ translations.subscription_options }}
+          </span>
+          <a href="{{ links.help_url }}" target="_blank">
+            <i class="material-icons">open_in_new</i>
+            {{ translations.subscription_options_help_link_text}}
+          </a>
+        </h3>
+        <div class="card-body px-4">
+          <div class="form-group row">
+            <div class="col-sm-12 col-lg-3">
+              {{ ps.label_with_help(translations.enable_subscription_service, translations.enable_subscription_service_help) }}
+            </div>
+            <div class="col-sm-12">
+              {{ form_errors(subscriptionOptions.enable_subscriptions) }}
+              {{ form_widget(subscriptionOptions.enable_subscriptions) }}
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-12">
+              {{ ps.label_with_help(translations.carrier_warning, translations.carrier_warning_text) }}
+            </div>
+            <div class="col-sm-12">
+              {{ form_errors(subscriptionOptions.carrier) }}
+              {{ form_widget(subscriptionOptions.carrier) }}
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="d-flex justify-content-end">
+            <button class="btn btn-primary" id="save-invoices-options-button">{{ 'Save'|trans({}, 'Admin.Actions') }}</button>
+          </div>
+        </div>
+      </div>
+      {{ form_rest(subscriptionOptionsForm) }}
+      {{ form_end(subscriptionOptionsForm) }}
+    </div>
+  </div>
+{% endblock %}

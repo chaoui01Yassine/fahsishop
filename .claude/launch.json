@@ -1,0 +1,33 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "fahsishop – Apache (port 8080)",
+      "runtimeExecutable": "C:/laragon/bin/apache/httpd-2.4.66-260223-Win64-VS18/bin/httpd.exe",
+      "runtimeArgs": ["-f", "C:/laragon/bin/apache/httpd-2.4.66-260223-Win64-VS18/conf/httpd.conf"],
+      "port": 8080,
+      "url": "http://localhost:8080"
+    },
+    {
+      "name": "fahsishop – PHP Built-in Server",
+      "runtimeExecutable": "C:/laragon/bin/php/php-8.3.30-Win32-vs16-x64/php.exe",
+      "runtimeArgs": ["-S", "localhost:8000", "-t", "C:/commerce/fahsishop/www", "C:/commerce/fahsishop/www/router.php"],
+      "port": 8000
+    },
+    {
+      "name": "fahsishop – Admin Build Watch (SCSS/JS)",
+      "runtimeExecutable": "C:/laragon/bin/nodejs/node-v22/node.exe",
+      "runtimeArgs": ["node_modules/.bin/gulp", "watch"],
+      "cwd": "C:/commerce/fahsishop/www/admin041ejsw24c3eq958pqa/themes/default",
+      "port": null,
+      "note": "Compile les assets SCSS/JS du backoffice en mode watch"
+    },
+    {
+      "name": "fahsishop – MySQL (HeidiSQL)",
+      "runtimeExecutable": "C:/laragon/bin/heidisql/heidisql.exe",
+      "runtimeArgs": [],
+      "autoPort": true,
+      "note": "Ouvre HeidiSQL pour gérer la base de données locale fahsishop"
+    }
+  ]
+}

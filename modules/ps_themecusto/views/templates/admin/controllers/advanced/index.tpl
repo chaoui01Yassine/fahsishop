@@ -1,16 +1,16 @@
 {*
-* 2007-2018 PrestaShop
+* 2007-2018 fahsishop
 *
 * DISCLAIMER
 *
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
+* Do not edit or add to this file if you wish to upgrade fahsishop to newer
+* versions in the future. If you wish to customize fahsishop for your
+* needs please refer to https://fahsishop.com for more information.
 *
-* @author    PrestaShop SA <contact@prestashop.com>
-* @copyright 2007-2018 PrestaShop SA
-* @license   http://addons.prestashop.com/en/content/12-terms-and-conditions-of-use
-* International Registered Trademark & Property of PrestaShop SA
+* @author    fahsishop <contact@fahsishop.com>
+* @copyright 2007-2018 fahsishop
+* @license   https://fahsishop.com/en/content/12-terms-and-conditions-of-use
+* International Registered Trademark & Property of fahsishop
 *}
 
 <div id="psthemecusto">
@@ -66,7 +66,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-lg-push-1">
-                <a href="https://devdocs.prestashop.com/1.7/themes/reference/template_inheritance/parent_child_feature/" class="link-child btn btn-outline-secondary btn-lg btn-block" rel="noopener" target="_blank">{l s='How to use parents/child themes' mod='ps_themecusto'} <i class="icon-external-link"></i></a>
+                <a href="https://fahsishop.com/1.7/themes/reference/template_inheritance/parent_child_feature/" class="link-child btn btn-outline-secondary btn-lg btn-block" rel="noopener" target="_blank">{l s='How to use parents/child themes' mod='ps_themecusto'} <i class="icon-external-link"></i></a>
             </div>
             <div class="col-lg-3 col-lg-push-2">
                 <a href="#" class="btn btn-primary btn-lg btn-block" rel="noopener" data-toggle="modal" data-target="#upload-child-modal" >{l s='Upload child theme' mod='ps_themecusto'}</a>

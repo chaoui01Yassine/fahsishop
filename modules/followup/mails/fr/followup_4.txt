@@ -18,4 +18,4 @@ Enter this code in your shopping cart to get the discount.
 
 [{shop_name}]({shop_url})
 
-Powered by [PrestaShop](https://www.prestashop-project.org/)
+Powered by [fahsishop](https://fahsishop.com/)

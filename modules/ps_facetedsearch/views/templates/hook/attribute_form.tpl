@@ -1,6 +1,6 @@
 {**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+ * Copyright since 2007 fahsishop and Contributors
+ * fahsishop is an International Registered Trademark & Property of fahsishop
  *
  * NOTICE OF LICENSE
  *
@@ -10,10 +10,10 @@
  * https://opensource.org/licenses/AFL-3.0
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
+ * to contact@fahsishop.com so we can send you a copy immediately.
  *
- * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright Since 2007 PrestaShop SA and Contributors
+ * @author    fahsishop <contact@fahsishop.com>
+ * @copyright Since 2007 fahsishop and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
 <div class="form-group">
@@ -41,7 +41,7 @@
 			  </div>
 			{/foreach}
 			<div class="col-lg-9">
-				<p class="help-block">{l s='When the Faceted Search module is enabled, you can get more detailed URLs by choosing the word that best represent this attribute. By default, PrestaShop uses the attribute\'s name, but you can change that setting using this field.' d='Modules.Facetedsearch.Admin'}</p>
+				<p class="help-block">{l s='When the Faceted Search module is enabled, you can get more detailed URLs by choosing the word that best represent this attribute. By default, fahsishop uses the attribute\'s name, but you can change that setting using this field.' d='Modules.Facetedsearch.Admin'}</p>
 			</div>
 		</div>
 	</div>
@@ -69,7 +69,7 @@
 			  </div>
 			{/foreach}
 			<div class="col-lg-9">
-				<p class="help-block">{l s='When the Faceted Search module is enabled, you can get more detailed page titles by choosing the word that best represent this attribute. By default, PrestaShop uses the attribute\'s name, but you can change that setting using this field.' d='Modules.Facetedsearch.Admin'}</p>
+				<p class="help-block">{l s='When the Faceted Search module is enabled, you can get more detailed page titles by choosing the word that best represent this attribute. By default, fahsishop uses the attribute\'s name, but you can change that setting using this field.' d='Modules.Facetedsearch.Admin'}</p>
 			</div>
 		</div>
 	</div>

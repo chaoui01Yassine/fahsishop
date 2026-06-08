@@ -4,7 +4,7 @@
 	<displayName><![CDATA[Supplier List]]></displayName>
 	<version><![CDATA[1.0.6]]></version>
 	<description><![CDATA[Adds a block with a list of your product suppliers on your shop.]]></description>
-	<author><![CDATA[PrestaShop]]></author>
+	<author><![CDATA[fahsishop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>
 	<is_configurable>1</is_configurable>
 	<need_instance>0</need_instance>

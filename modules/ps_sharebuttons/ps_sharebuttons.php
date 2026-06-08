@@ -1,6 +1,6 @@
 <?php
 /*
-* 2007-2020 PrestaShop
+* 2007-2020 fahsishop
 *
 * NOTICE OF LICENSE
 *
@@ -10,18 +10,18 @@
 * https://opensource.org/licenses/afl-3.0.php
 * If you did not receive a copy of the license and are unable to
 * obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
+* to contact@fahsishop.com so we can send you a copy immediately.
 *
 * DISCLAIMER
 *
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to https://www.prestashop.com for more information.
+* Do not edit or add to this file if you wish to upgrade fahsishop to newer
+* versions in the future. If you wish to customize fahsishop for your
+* needs please refer to https://fahsishop.com for more information.
 *
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2020 PrestaShop SA
+*  @author fahsishop <contact@fahsishop.com>
+*  @copyright  2007-2020 fahsishop
 *  @license    https://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
+*  International Registered Trademark & Property of fahsishop
 */
 
 if (!defined('_PS_VERSION_')) {
@@ -45,7 +45,7 @@ class Ps_Sharebuttons extends Module implements WidgetInterface
     {
         $this->name = 'ps_sharebuttons';
         $this->tab = 'advertising_marketing';
-        $this->author = 'PrestaShop';
+        $this->author = 'fahsishop';
         $this->version = '2.1.2';
         $this->need_instance = 0;
 

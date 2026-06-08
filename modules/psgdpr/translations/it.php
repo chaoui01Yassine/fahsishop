@@ -1,7 +1,7 @@
 <?php
 /**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+ * Copyright since 2007 fahsishop and Contributors
+ * fahsishop is an International Registered Trademark & Property of fahsishop
  *
  * NOTICE OF LICENSE
  *
@@ -11,16 +11,16 @@
  * https://opensource.org/licenses/AFL-3.0
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
+ * to contact@fahsishop.com so we can send you a copy immediately.
  *
- * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright Since 2007 PrestaShop SA and Contributors
+ * @author    fahsishop <contact@fahsishop.com>
+ * @copyright Since 2007 fahsishop and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  */
 global $_MODULE;
 $_MODULE = [];
 $_MODULE['<{psgdpr}prestashop>psgdpr_5966265f35dd87febf4d59029bc9ef66'] = 'Modulo Ufficiale Conformità GDPR';
-$_MODULE['<{psgdpr}prestashop>psgdpr_dbf90f78fc135d723570a4a43041a3dc'] = 'Rispetta i principali requisiti del Regolamento generale europeo sulla protezione dei dati con questo modulo sviluppato da PrestaShop.';
+$_MODULE['<{psgdpr}prestashop>psgdpr_dbf90f78fc135d723570a4a43041a3dc'] = 'Rispetta i principali requisiti del Regolamento generale europeo sulla protezione dei dati con questo modulo sviluppato da fahsishop.';
 $_MODULE['<{psgdpr}prestashop>psgdpr_bb8956c67b82c7444a80c6b2433dd8b4'] = 'Confermi di voler disinstallare questo modulo?';
 $_MODULE['<{psgdpr}prestashop>psgdpr_e9415612c1d72517733c98e6877a6b46'] = 'Si è verificato un errore durante la disinstallazione. Ti preghiamo di contattarci attraverso il sito Addons.';
 $_MODULE['<{psgdpr}prestashop>psgdpr_78d320af42aca685d1fcd1113f09939e'] = 'Si è verificato un errore durante la disinstallazione. Ti preghiamo di contattarci attraverso il sito Addons';
@@ -130,7 +130,7 @@ $_MODULE['<{psgdpr}prestashop>help_5eaa63820c162e960a23700319f7e3cc'] = 'Trova q
 $_MODULE['<{psgdpr}prestashop>help_5b6cf869265c13af8566f192b4ab3d2a'] = 'Documentazione';
 $_MODULE['<{psgdpr}prestashop>help_1fe917b01f9a3f87fa2d7d3b7643fac1'] = 'FAQ';
 $_MODULE['<{psgdpr}prestashop>help_986c907a7f2adcdbadb4785a441f9b23'] = 'Non hai trovato la risposta alla tua domanda?';
-$_MODULE['<{psgdpr}prestashop>help_0b4f23e625077174e2bda0b340e02632'] = 'Contattaci su PrestaShop Addons';
+$_MODULE['<{psgdpr}prestashop>help_0b4f23e625077174e2bda0b340e02632'] = 'Contattaci su fahsishop Addons';
 $_MODULE['<{psgdpr}prestashop>customeractivity_f5a289ea76ecee6abfd43c2e7eddf58f'] = 'Elenco delle attività dei clienti';
 $_MODULE['<{psgdpr}prestashop>customeractivity_f078af4e0b76b98d53f3820e0ce629b2'] = 'Tieni traccia delle attività di accesso, consenso e cancellazione dati dei tuoi clienti.';
 $_MODULE['<{psgdpr}prestashop>customeractivity_9579cdef0bf63ffa6b1e3e3c616d9cac'] = 'Nome del cliente/ID';
@@ -150,7 +150,7 @@ $_MODULE['<{psgdpr}prestashop>getstarted_56ebf6e5564c6b92e4d77e88949fd52c'] = 'i
 $_MODULE['<{psgdpr}prestashop>getstarted_eff0cc2d13389da1aa5ae9405418354f'] = 'Aiuta inoltre a tenere traccia delle attività di trattamento dati (in particolare l\'accesso, la richiesta di consenso e la cancellazione).';
 $_MODULE['<{psgdpr}prestashop>getstarted_cb5830c9314fa880d3607bbac3d78af8'] = 'Segui questi 3 passaggi per configurare il modulo e mettere a norma il tuo sito secondo il GDPR!';
 $_MODULE['<{psgdpr}prestashop>getstarted_34e34c43ec6b943c10a3cc1a1a16fb11'] = 'Gestire';
-$_MODULE['<{psgdpr}prestashop>getstarted_604c6226ffa8d05ba2e9d637852673a6'] = 'Consulta la nostra scheda Gestione dati personali per visualizzare i dati registrati da PrestaShop, dai moduli personalizzati e da quelli della community.';
+$_MODULE['<{psgdpr}prestashop>getstarted_604c6226ffa8d05ba2e9d637852673a6'] = 'Consulta la nostra scheda Gestione dati personali per visualizzare i dati registrati da fahsishop, dai moduli personalizzati e da quelli della community.';
 $_MODULE['<{psgdpr}prestashop>getstarted_63a78ed4647f7c63c2929e35ec1c95e3'] = 'Personalizza';
 $_MODULE['<{psgdpr}prestashop>getstarted_232c8c9b71d0a7d5197d29735ef4b903'] = 'Personalizza le caselle di conferma e i messaggi di richiesta di consenso dei diversi formulari del tuo negozio, in particolare quelli di creazione di account e sottoscrizione alla newsletter.';
 $_MODULE['<{psgdpr}prestashop>getstarted_afc9168648f61aa6abd0bf76b84abc3b'] = 'Tieni traccia';
@@ -158,7 +158,7 @@ $_MODULE['<{psgdpr}prestashop>getstarted_c9c1dc03aed08d4c60bde968b3417f60'] = 'V
 $_MODULE['<{psgdpr}prestashop>getstarted_eb36499a1ed94957bf4988899d45aa1a'] = 'Nota: Assicurati di utilizzare l’ultima versione dei moduli installati per poter sfruttare appieno tutte le funzionalità del modulo GDPR. Qualora non fosse possibile accedere all’elenco dati di uno o più moduli, contatta direttamente lo sviluppatore.';
 $_MODULE['<{psgdpr}prestashop>getstarted_011400bd7b57639a3aa5a2dd70f275ee'] = 'Maggiori informazioni sul GDPR';
 $_MODULE['<{psgdpr}prestashop>getstarted_75ab3e8ff5e5eb97d91eb14e5c82beb2'] = 'Siti web delle autorità di protezione dei dati';
-$_MODULE['<{psgdpr}prestashop>getstarted_47d4e5149c64dfa18b87cf6dc464e5ee'] = 'Libro bianco GDPR PrestaShop';
+$_MODULE['<{psgdpr}prestashop>getstarted_47d4e5149c64dfa18b87cf6dc464e5ee'] = 'Libro bianco GDPR fahsishop';
 $_MODULE['<{psgdpr}prestashop>getstarted_5040ffa592d5e7ed29a396a4c416ebda'] = 'Documentazione del modulo';
 $_MODULE['<{psgdpr}prestashop>getstarted_34e2d1989a1dbf75cd631596133ee5ee'] = 'Video';
 $_MODULE['<{psgdpr}prestashop>getstarted_712b9d33de9cca47077a2d2b1831edb8'] = 'Articolo su Build';
@@ -166,13 +166,13 @@ $_MODULE['<{psgdpr}prestashop>getstarted_1972bd6acee82b7e9fc7af320ae4e673'] = 'N
 $_MODULE['<{psgdpr}prestashop>getstarted_85e3340d54570d5167c2daaff75308c6'] = 'È responsabilità del commerciante';
 $_MODULE['<{psgdpr}prestashop>getstarted_651f509e8c074849330167fa1dd41c19'] = 'configurare adeguatamente i moduli e prendere tutte le misure necessarie per assicurare tale conformità. Per domande specifiche ti inviamo a rivolgerti a uno studio legale specializzato in questioni relative ai dati personali.';
 $_MODULE['<{psgdpr}prestashop>dataconfig_aa4de6aaed26c361322b279d34d8a7dd'] = 'Visualizzazione dei dati e azioni automatiche';
-$_MODULE['<{psgdpr}prestashop>dataconfig_c32a80e0c500e5a7537f5b70fe8129fd'] = 'Consulta qui l’elenco completo dei dati personali registrati da PrestaShop e dai tuoi moduli installati.';
+$_MODULE['<{psgdpr}prestashop>dataconfig_c32a80e0c500e5a7537f5b70fe8129fd'] = 'Consulta qui l’elenco completo dei dati personali registrati da fahsishop e dai tuoi moduli installati.';
 $_MODULE['<{psgdpr}prestashop>dataconfig_3a7a2fb701b6c416ccfd2328cb1461d6'] = 'Tali dati vengono utilizzati in 2 momenti:';
 $_MODULE['<{psgdpr}prestashop>dataconfig_34c7656d69407f8ff8bc0ae5ad35daca'] = 'quando un cliente richiede di accedere ai propri dati personali e riceve una copia di quelli che sono stati raccolti dal tuo sito;';
 $_MODULE['<{psgdpr}prestashop>dataconfig_d61bbb8ed4a9c97a676591d853b71488'] = 'quando un cliente richiede la cancellazione dei dati e, una volta accettata la richiesta da parte tua, questi vengono eliminati definitivamente.';
 $_MODULE['<{psgdpr}prestashop>dataconfig_5680774f084e3133256426b423793cdf'] = 'Elenco moduli conformi';
 $_MODULE['<{psgdpr}prestashop>dataconfig_fbc7f08ab791ff80697db8706f83ac05'] = 'Consulta qui l’elenco degli elementi conformi al RGPD.';
-$_MODULE['<{psgdpr}prestashop>dataconfig_e7040e6151b9ba04bebf1ac35a3b9773'] = 'Dati PrestaShop';
+$_MODULE['<{psgdpr}prestashop>dataconfig_e7040e6151b9ba04bebf1ac35a3b9773'] = 'Dati fahsishop';
 $_MODULE['<{psgdpr}prestashop>dataconfig_007798f2b7231fa9572e704aa3e2b864'] = 'Di seguito troverai la lista dei tuoi moduli installati non visualizzati in precedenza: Se ritieni che uno o più moduli raccolga dati personali (';
 $_MODULE['<{psgdpr}prestashop>dataconfig_a4ea91cd0d1ea33d8113457644dd6157'] = 'fai clic qui';
 $_MODULE['<{psgdpr}prestashop>dataconfig_b1cb373e07897abad098c86e8f026b20'] = 'per sapere quali dati sono considerati personali):';

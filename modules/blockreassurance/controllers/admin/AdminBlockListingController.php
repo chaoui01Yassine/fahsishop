@@ -1,7 +1,7 @@
 <?php
 /**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+ * Copyright since 2007 fahsishop and Contributors
+ * fahsishop is an International Registered Trademark & Property of fahsishop
  *
  * NOTICE OF LICENSE
  *
@@ -11,10 +11,10 @@
  * https://opensource.org/licenses/AFL-3.0
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
+ * to contact@fahsishop.com so we can send you a copy immediately.
  *
- * @author    PrestaShop SA and Contributors <contact@prestashop.com>
- * @copyright Since 2007 PrestaShop SA and Contributors
+ * @author    fahsishop and Contributors <contact@fahsishop.com>
+ * @copyright Since 2007 fahsishop and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
  */
 class AdminBlockListingController extends ModuleAdminController
@@ -177,7 +177,7 @@ class AdminBlockListingController extends ModuleAdminController
 
             // validateUpload return false if no error (false -> OK)
             if (version_compare(_PS_VERSION_, '1.7.7.0', '>=')) {
-                // PrestaShop 1.7.7.0+
+                // fahsishop 1.7.7.0+
                 $validUpload = ImageManager::validateUpload(
                     $customImage,
                     0,
@@ -185,7 +185,7 @@ class AdminBlockListingController extends ModuleAdminController
                     $authMimeType
                 );
             } else {
-                // PrestaShop < 1.7.7
+                // fahsishop < 1.7.7
                 $validUpload = false;
                 $mimeType = ReassuranceActivity::getMimeType($customImage['tmp_name']);
                 if ($mimeType && (

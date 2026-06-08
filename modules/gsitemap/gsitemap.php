@@ -1,7 +1,7 @@
 <?php
 /**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+ * Copyright since 2007 fahsishop and Contributors
+ * fahsishop is an International Registered Trademark & Property of fahsishop
  *
  * NOTICE OF LICENSE
  *
@@ -11,16 +11,16 @@
  * https://opensource.org/licenses/AFL-3.0
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
+ * to contact@fahsishop.com so we can send you a copy immediately.
  *
  * DISCLAIMER
  *
- * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
- * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to https://devdocs.prestashop.com/ for more information.
+ * Do not edit or add to this file if you wish to upgrade fahsishop to newer
+ * versions in the future. If you wish to customize fahsishop for your
+ * needs please refer to https://fahsishop.com/ for more information.
  *
- * @author    PrestaShop SA and Contributors <contact@prestashop.com>
- * @copyright Since 2007 PrestaShop SA and Contributors
+ * @author    fahsishop and Contributors <contact@fahsishop.com>
+ * @copyright Since 2007 fahsishop and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  */
 if (!defined('_PS_VERSION_')) {
@@ -61,7 +61,7 @@ class Gsitemap extends Module
         $this->name = 'gsitemap';
         $this->tab = 'checkout';
         $this->version = '4.4.0';
-        $this->author = 'PrestaShop';
+        $this->author = 'fahsishop';
         $this->need_instance = 0;
         $this->bootstrap = true;
         parent::__construct();
@@ -724,7 +724,7 @@ class Gsitemap extends Module
     public function createSitemap($id_shop = 0)
     {
         if (@fopen($this->normalizeDirectory(_PS_ROOT_DIR_) . '/test.txt', 'wb') == false) {
-            $this->context->controller->errors[] = $this->trans('An error occured while trying to check your file permissions. Please adjust your permissions to allow PrestaShop to write a file in your root directory.', [], 'Modules.Gsitemap.Admin');
+            $this->context->controller->errors[] = $this->trans('An error occured while trying to check your file permissions. Please adjust your permissions to allow fahsishop to write a file in your root directory.', [], 'Modules.Gsitemap.Admin');
 
             return false;
         } else {

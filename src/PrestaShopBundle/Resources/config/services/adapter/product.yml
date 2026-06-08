@@ -78,7 +78,7 @@ services:
 
   PrestaShop\PrestaShop\Adapter\Product\QueryHandler\SearchProductsHandler:
     arguments:
-      - '@=service("PrestaShop\\PrestaShop\\Adapter\\LegacyContext").getContext().language.id'
+      - '@=service("PrestaShop\PrestaShop\Adapter\LegacyContext").getContext().language.id'
       - '@PrestaShop\PrestaShop\Core\Localization\LocaleInterface'
       - '@PrestaShop\PrestaShop\Adapter\Tools'
       - '@PrestaShop\PrestaShop\Core\Currency\CurrencyDataProviderInterface'
@@ -103,15 +103,15 @@ services:
     arguments:
       - '@prestashop.core.grid.data.factory.product'
       - '@PrestaShop\PrestaShop\Core\Localization\Locale\Repository'
-      - '@=service("PrestaShop\\PrestaShop\\Adapter\\LegacyContext").getContext().language.getLocale()'
-      - '@=service("PrestaShop\\PrestaShop\\Adapter\\Configuration").get("PS_CURRENCY_DEFAULT")'
+      - '@=service("PrestaShop\PrestaShop\Adapter\LegacyContext").getContext().language.getLocale()'
+      - '@=service("PrestaShop\PrestaShop\Adapter\Configuration").get("PS_CURRENCY_DEFAULT")'
       - '@PrestaShop\PrestaShop\Adapter\Tax\TaxComputer'
-      - '@=service("PrestaShop\\PrestaShop\\Adapter\\LegacyContext").getContext().country.id'
+      - '@=service("PrestaShop\PrestaShop\Adapter\LegacyContext").getContext().country.id'
       - '@PrestaShop\PrestaShop\Adapter\Product\Image\ProductImagePathFactory'
       - '@translator'
-      - '@=service("PrestaShop\\PrestaShop\\Adapter\\Configuration").getBoolean("PS_TAX")'
-      - '@=service("PrestaShop\\PrestaShop\\Adapter\\Configuration").getBoolean("PS_USE_ECOTAX")'
-      - '@=service("PrestaShop\\PrestaShop\\Adapter\\Configuration").getInt("PS_ECOTAX_TAX_RULES_GROUP_ID")'
+      - '@=service("PrestaShop\PrestaShop\Adapter\Configuration").getBoolean("PS_TAX")'
+      - '@=service("PrestaShop\PrestaShop\Adapter\Configuration").getBoolean("PS_USE_ECOTAX")'
+      - '@=service("PrestaShop\PrestaShop\Adapter\Configuration").getInt("PS_ECOTAX_TAX_RULES_GROUP_ID")'
       - '@PrestaShop\PrestaShop\Adapter\Shop\Repository\ShopRepository'
       - '@PrestaShop\PrestaShop\Adapter\Product\Repository\ProductRepository'
 
@@ -125,15 +125,15 @@ services:
     arguments:
       - '@prestashop.core.grid.data.factory.product'
       - '@PrestaShop\PrestaShop\Core\Localization\Locale\Repository'
-      - '@=service("PrestaShop\\PrestaShop\\Adapter\\LegacyContext").getContext().language.getLocale()'
-      - '@=service("PrestaShop\\PrestaShop\\Adapter\\Configuration").get("PS_CURRENCY_DEFAULT")'
-      - '@=service("PrestaShop\\PrestaShop\\Adapter\\Configuration").get("PS_STOCK_MANAGEMENT")'
+      - '@=service("PrestaShop\PrestaShop\Adapter\LegacyContext").getContext().language.getLocale()'
+      - '@=service("PrestaShop\PrestaShop\Adapter\Configuration").get("PS_CURRENCY_DEFAULT")'
+      - '@=service("PrestaShop\PrestaShop\Adapter\Configuration").get("PS_STOCK_MANAGEMENT")'
 
   PrestaShop\PrestaShop\Adapter\Product\QueryHandler\GetProductForEditingHandler:
     autowire: true
     public: false
     arguments:
-      $countryId: '@=service("PrestaShop\\PrestaShop\\Adapter\\Configuration").getInt("PS_COUNTRY_DEFAULT")'
+      $countryId: '@=service("PrestaShop\PrestaShop\Adapter\Configuration").getInt("PS_COUNTRY_DEFAULT")'
     tags:
       - name: tactician.handler
         command: PrestaShop\PrestaShop\Core\Domain\Product\Query\GetProductForEditing
@@ -304,7 +304,7 @@ services:
     autowire: true
     public: false
     arguments:
-      $defaultCurrencyId: '@=service("PrestaShop\\PrestaShop\\Adapter\\Configuration").get("PS_CURRENCY_DEFAULT")'
+      $defaultCurrencyId: '@=service("PrestaShop\PrestaShop\Adapter\Configuration").get("PS_CURRENCY_DEFAULT")'
 
   PrestaShop\PrestaShop\Adapter\Product\Update\RelatedProductsUpdater:
     autowire: true
@@ -369,7 +369,7 @@ services:
   PrestaShop\PrestaShop\Adapter\Product\Update\ProductIndexationUpdater:
     arguments:
       - '@PrestaShop\PrestaShop\Adapter\ContextStateManager'
-      - '@=service("PrestaShop\\PrestaShop\\Adapter\\Configuration").getBoolean("PS_SEARCH_INDEXATION")'
+      - '@=service("PrestaShop\PrestaShop\Adapter\Configuration").getBoolean("PS_SEARCH_INDEXATION")'
 
   PrestaShop\PrestaShop\Adapter\Product\Repository\ProductPreviewRepository:
     autowire: true
@@ -408,7 +408,7 @@ services:
 
   PrestaShop\PrestaShop\Adapter\Product\Update\Filler\BasicInformationFiller:
     arguments:
-      - '@=service("PrestaShop\\PrestaShop\\Adapter\\Configuration").get("PS_LANG_DEFAULT")'
+      - '@=service("PrestaShop\PrestaShop\Adapter\Configuration").get("PS_LANG_DEFAULT")'
     tags:
       # its important that BasicInformationFiller is prioritized before the SeoFiller, because of link_rewrite overriding
       - { name: 'core.product_filler', priority: 10 }

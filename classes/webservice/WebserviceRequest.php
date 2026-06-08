@@ -1,7 +1,7 @@
 <?php
 /**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+ * Copyright since 2007 fahsishop and Contributors
+ * fahsishop is an International Registered Trademark & Property of fahsishop
  *
  * NOTICE OF LICENSE
  *
@@ -11,16 +11,16 @@
  * https://opensource.org/licenses/OSL-3.0
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
+ * to contact@fahsishop.com so we can send you a copy immediately.
  *
  * DISCLAIMER
  *
- * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
- * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to https://devdocs.prestashop.com/ for more information.
+ * Do not edit or add to this file if you wish to upgrade fahsishop to newer
+ * versions in the future. If you wish to customize fahsishop for your
+ * needs please refer to https://fahsishop.com/ for more information.
  *
- * @author    PrestaShop SA and Contributors <contact@prestashop.com>
- * @copyright Since 2007 PrestaShop SA and Contributors
+ * @author    fahsishop and Contributors <contact@fahsishop.com>
+ * @copyright Since 2007 fahsishop and Contributors
  * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
 class WebserviceRequestCore
@@ -53,18 +53,18 @@ class WebserviceRequestCore
     protected $objectSpecificManagement = false;
 
     /**
-     * Base PrestaShop webservice URL.
+     * Base fahsishop webservice URL.
      *
      * @var string
      */
     public $wsUrl;
 
     /**
-     * PrestaShop Webservice Documentation URL.
+     * fahsishop Webservice Documentation URL.
      *
      * @var string
      */
-    protected $_docUrl = 'https://devdocs.prestashop.com/8/webservice';
+    protected $_docUrl = 'https://fahsishop.com/8/webservice';
 
     /**
      * Set if the authentication key was checked.
@@ -137,7 +137,7 @@ class WebserviceRequestCore
     public $objects;
 
     /**
-     * The current object to support, it extends the PrestaShop ObjectModel.
+     * The current object to support, it extends the fahsishop ObjectModel.
      *
      * @var ObjectModel
      */
@@ -843,7 +843,7 @@ class WebserviceRequestCore
             }
         }
         if ($this->hasErrors()) {
-            header('WWW-Authenticate: Basic realm="Welcome to PrestaShop Webservice, please enter the authentication key as the login. No password required."');
+            header('WWW-Authenticate: Basic realm="Welcome to fahsishop Webservice, please enter the authentication key as the login. No password required."');
             $this->objOutput->setStatus(401);
 
             return false;
@@ -863,7 +863,7 @@ class WebserviceRequestCore
     protected function isActivated()
     {
         if (!Configuration::get('PS_WEBSERVICE')) {
-            $this->setError(503, 'The PrestaShop webservice is disabled. Please activate it in the PrestaShop Back Office', 22);
+            $this->setError(503, 'The fahsishop webservice is disabled. Please activate it in the fahsishop Back Office', 22);
 
             return false;
         }
@@ -1437,7 +1437,7 @@ class WebserviceRequestCore
     }
 
     /**
-     * Execute POST method on a PrestaShop entity.
+     * Execute POST method on a fahsishop entity.
      *
      * @return bool
      */
@@ -1447,7 +1447,7 @@ class WebserviceRequestCore
     }
 
     /**
-     * Execute PUT method on a PrestaShop entity.
+     * Execute PUT method on a fahsishop entity.
      *
      * @return bool
      */
@@ -1457,7 +1457,7 @@ class WebserviceRequestCore
     }
 
     /**
-     * Execute PATCH method on a PrestaShop entity.
+     * Execute PATCH method on a fahsishop entity.
      *
      * @return bool
      */
@@ -1467,7 +1467,7 @@ class WebserviceRequestCore
     }
 
     /**
-     * Execute DELETE method on a PrestaShop entity.
+     * Execute DELETE method on a fahsishop entity.
      *
      * @return void
      */
@@ -1811,7 +1811,7 @@ class WebserviceRequestCore
         // Write headers
         $this->objOutput
             ->setHeaderParams('Access-Time', (string) time())
-            ->setHeaderParams('X-Powered-By', 'PrestaShop Webservice')
+            ->setHeaderParams('X-Powered-By', 'fahsishop Webservice')
             ->setHeaderParams('Execution-Time', (string) round(microtime(true) - $this->_startTime, 3))
         ;
 

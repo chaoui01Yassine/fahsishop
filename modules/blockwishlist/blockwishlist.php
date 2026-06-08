@@ -1,7 +1,7 @@
 <?php
 /**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+ * Copyright since 2007 fahsishop and Contributors
+ * fahsishop is an International Registered Trademark & Property of fahsishop
  *
  * NOTICE OF LICENSE
  *
@@ -11,10 +11,10 @@
  * https://opensource.org/licenses/AFL-3.0
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
+ * to contact@fahsishop.com so we can send you a copy immediately.
  *
- * @author    PrestaShop SA and Contributors <contact@prestashop.com>
- * @copyright Since 2007 PrestaShop SA and Contributors
+ * @author    fahsishop and Contributors <contact@fahsishop.com>
+ * @copyright Since 2007 fahsishop and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
  */
 
@@ -73,7 +73,7 @@ class BlockWishList extends Module
         $this->name = 'blockwishlist';
         $this->tab = 'front_office_features';
         $this->version = '3.0.2';
-        $this->author = 'PrestaShop';
+        $this->author = 'fahsishop';
         $this->need_instance = 0;
 
         parent::__construct();
@@ -130,7 +130,7 @@ class BlockWishList extends Module
     /**
      * Add asset for Shop Front Office
      *
-     * @see https://devdocs.prestashop.com/1.7/themes/getting-started/asset-management/#without-a-front-controller-module
+     * @see https://fahsishop.com/1.7/themes/getting-started/asset-management/#without-a-front-controller-module
      *
      * @param array $params
      */

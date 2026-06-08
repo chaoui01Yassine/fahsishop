@@ -1,6 +1,6 @@
 <?php
 /*
-* 2007-2016 PrestaShop
+* 2007-2016 fahsishop
 *
 * NOTICE OF LICENSE
 *
@@ -10,18 +10,18 @@
 * http://opensource.org/licenses/afl-3.0.php
 * If you did not receive a copy of the license and are unable to
 * obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
+* to contact@fahsishop.com so we can send you a copy immediately.
 *
 * DISCLAIMER
 *
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
+* Do not edit or add to this file if you wish to upgrade fahsishop to newer
+* versions in the future. If you wish to customize fahsishop for your
+* needs please refer to https://fahsishop.com for more information.
 *
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2016 PrestaShop SA
+*  @author fahsishop <contact@fahsishop.com>
+*  @copyright  2007-2016 fahsishop
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
+*  International Registered Trademark & Property of fahsishop
 */
 
 if (!defined('_PS_VERSION_')) {
@@ -37,7 +37,7 @@ class PagesNotFound extends Module
         $this->name = 'pagesnotfound';
         $this->tab = 'administration';
         $this->version = '2.0.3';
-        $this->author = 'PrestaShop';
+        $this->author = 'fahsishop';
         $this->need_instance = 0;
 
         parent::__construct();
@@ -129,7 +129,7 @@ class PagesNotFound extends Module
 				<p>&nbsp;</p>
 				<h4>' . $this->trans('How to catch these errors?', [], 'Modules.Pagesnotfound.Admin') . '</h4>
 				<p>'
-            . sprintf($this->trans('If your webhost supports .htaccess files, you can create one in the root directory of PrestaShop and insert the following line inside: "%s".', [], 'Modules.Pagesnotfound.Admin'), 'ErrorDocument 404 ' . __PS_BASE_URI__ . '404.php') . '<br />' .
+            . sprintf($this->trans('If your webhost supports .htaccess files, you can create one in the root directory of fahsishop and insert the following line inside: "%s".', [], 'Modules.Pagesnotfound.Admin'), 'ErrorDocument 404 ' . __PS_BASE_URI__ . '404.php') . '<br />' .
             sprintf($this->trans('A user requesting a page which doesn\'t exist will be redirected to the following page: %s. This module logs access to this page.', [], 'Modules.Pagesnotfound.Admin'), __PS_BASE_URI__ . '404.php') . '
 				</p>
 			</div>';

@@ -4,7 +4,7 @@
 	<displayName><![CDATA[Shopping cart]]></displayName>
 	<version><![CDATA[3.0.0]]></version>
 	<description><![CDATA[Adds a block containing the customer&#039;s shopping cart.]]></description>
-	<author><![CDATA[PrestaShop]]></author>
+	<author><![CDATA[fahsishop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>
 	<is_configurable>1</is_configurable>
 	<need_instance>0</need_instance>

@@ -1,7 +1,7 @@
 <?php
 /**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+ * Copyright since 2007 fahsishop and Contributors
+ * fahsishop is an International Registered Trademark & Property of fahsishop
  *
  * NOTICE OF LICENSE
  *
@@ -11,16 +11,16 @@
  * https://opensource.org/licenses/OSL-3.0
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
+ * to contact@fahsishop.com so we can send you a copy immediately.
  *
  * DISCLAIMER
  *
- * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
- * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to https://devdocs.prestashop.com/ for more information.
+ * Do not edit or add to this file if you wish to upgrade fahsishop to newer
+ * versions in the future. If you wish to customize fahsishop for your
+ * needs please refer to https://fahsishop.com/ for more information.
  *
- * @author    PrestaShop SA and Contributors <contact@prestashop.com>
- * @copyright Since 2007 PrestaShop SA and Contributors
+ * @author    fahsishop and Contributors <contact@fahsishop.com>
+ * @copyright Since 2007 fahsishop and Contributors
  * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
 use PrestaShop\PrestaShop\Core\Addon\Theme\Theme;
@@ -495,7 +495,7 @@ class AdminTranslationsControllerCore extends AdminController
                  * We don't export tab translations that are identical to the default
                  * tab translations to avoid a problem that would occur in the followin scenario:
                  *
-                 * 1) install PrestaShop in, say, Spanish => tabs are by default in Spanish
+                 * 1) install fahsishop in, say, Spanish => tabs are by default in Spanish
                  * 2) create a new language, say, Klingon => tabs are populated using the default, Spanish, tabs
                  * 3) export the Klingon language pack
                  *
@@ -1498,13 +1498,13 @@ class AdminTranslationsControllerCore extends AdminController
     {
         $this->getInformations();
 
-        /* PrestaShop demo mode */
+        /* fahsishop demo mode */
         if (_PS_MODE_DEMO_) {
             $this->errors[] = $this->trans('This functionality has been disabled.', [], 'Admin.Notifications.Error');
 
             return;
         }
-        /* PrestaShop demo mode */
+        /* fahsishop demo mode */
 
         try {
             if (Tools::isSubmit('submitCopyLang')) {
@@ -1533,7 +1533,7 @@ class AdminTranslationsControllerCore extends AdminController
                 }
             } elseif (Tools::isSubmit('submitTranslationsPdf')) {
                 if ($this->access('edit')) {
-                    // Only the PrestaShop team should write the translations into the _PS_TRANSLATIONS_DIR_
+                    // Only the fahsishop team should write the translations into the _PS_TRANSLATIONS_DIR_
                     if (!$this->theme_selected) {
                         $this->writeTranslationFile();
                     } else {

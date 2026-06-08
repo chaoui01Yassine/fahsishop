@@ -1,5 +1,5 @@
-Copyright since 2007 PrestaShop SA and Contributors
-PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+Copyright since 2007 fahsishop and Contributors
+fahsishop is an International Registered Trademark & Property of fahsishop
 
 NOTICE OF LICENSE
 
@@ -9,19 +9,19 @@ It is also available through the world-wide-web at this URL:
 https://opensource.org/licenses/OSL-3.0
 If you did not receive a copy of the license and are unable to
 obtain it through the world-wide-web, please send an email
-to license@prestashop.com so we can send you a copy immediately.
+to contact@fahsishop.com so we can send you a copy immediately.
 
 DISCLAIMER
 
-Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-versions in the future. If you wish to customize PrestaShop for your
-needs please refer to https://devdocs.prestashop.com/ for more information.
+Do not edit or add to this file if you wish to upgrade fahsishop to newer
+versions in the future. If you wish to customize fahsishop for your
+needs please refer to https://fahsishop.com/ for more information.
 
-@author    PrestaShop SA and Contributors <contact@prestashop.com>
-@copyright Since 2007 PrestaShop SA and Contributors
+@author    fahsishop and Contributors <contact@fahsishop.com>
+@copyright Since 2007 fahsishop and Contributors
 @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
 
-Changelog for PrestaShop 8
+Changelog for fahsishop 8
 
 ####################################
 #   v8.2.1 - (2025-02-10)
@@ -64,8 +64,8 @@ Changelog for PrestaShop 8
     - #36612: Add a condition for handling errors from hook actionModuleInstallBefore (by @JohnPAfr)
     - #37016: Guest.php - OS/Browser unnecessary logging to PHP error log in specific conditions (by @ShaiMagal)
     - #35695: Allow select correct invoice -> invoice_number can be "duplicated" (every year) (by @ShaiMagal)
-    - #37159: Updated PrestaShop Packages (by @github-actions[bot])
-    - #37147: Updated PrestaShop Packages (by @github-actions[bot])
+    - #37159: Updated fahsishop Packages (by @github-actions[bot])
+    - #37147: Updated fahsishop Packages (by @github-actions[bot])
     - #36938: Delete old thumbnail for variant images when deleting product (by @ShaiMagal)
   - Bug fix:
     - #37890: Fix preview mode for combination products (by @boherm)
@@ -112,8 +112,8 @@ Changelog for PrestaShop 8
     - #36905: Fix: Cart.php class method _deleteCustomization not deleting all image files from same customization but only first (by @Codencode)
 - Core:
   - Improvement:
-    - #36398: Updated PrestaShop Packages (by @github-actions)
-    - #36417: Updated PrestaShop Packages (by @github-actions)
+    - #36398: Updated fahsishop Packages (by @github-actions)
+    - #36417: Updated fahsishop Packages (by @github-actions)
     - #36576: Mail - Reply-To can be the same as the To address (spam indicator - negative points) (by @ShaiMagal)
     - #36764: Version number 8.2.0 (by @matks)
     - #36657: Add hook for assigning general purpose variables before the core does it (by @matthieu-rolland)
@@ -139,7 +139,7 @@ Changelog for PrestaShop 8
     - #35434: Improve wording of pack quantities (by @Hlavtox)
     - #35699: Correction of patch requests in PPV2 (by @M0rgan01)
     - #35564: Update product SEO metadata length (by @M0rgan01)
-    - #35518: BO login screen - don't show PrestaShop version before Employee successful login (by @ShaiMagal)
+    - #35518: BO login screen - don't show fahsishop version before Employee successful login (by @ShaiMagal)
   - Bug fix:
     - #36256: Fixed incorrect link to documentation (by @nicosomb)
     - #36244: Product page fixes (by @jolelievre)
@@ -170,11 +170,11 @@ Changelog for PrestaShop 8
 - Core:
   - Improvement:
     - #36341: Preliminary tasks for 8.1.7 release (by @jolelievre)
-    - #36284: Updated PrestaShop Packages (by @github-actions[bot])
+    - #36284: Updated fahsishop Packages (by @github-actions[bot])
     - #36069: Upgraded productcomments (by @nicosomb)
-    - #35892: Updated PrestaShop Packages (by @github-actions[bot])
-    - #35871: Updated PrestaShop Packages (by @github-actions[bot])
-    - #35754: Updated PrestaShop Packages (by @github-actions[bot])
+    - #35892: Updated fahsishop Packages (by @github-actions[bot])
+    - #35871: Updated fahsishop Packages (by @github-actions[bot])
+    - #35754: Updated fahsishop Packages (by @github-actions[bot])
   - Bug fix:
     - #35902: Fix min qty in front ProductController (by @boherm)
     - #36272: Fix compatibility error on ARM processors when installing via docker   (by @matthieu-rolland)
@@ -239,9 +239,9 @@ Changelog for PrestaShop 8
     - #35554: Update ps_googleanalytics (by @matthieu-rolland)
     - #35513: Update modules on composer for PS 8.1.5 (patch release) (by @matthieu-rolland)
     - #35422: Bump version to 8.1.5 (by @Hlavtox)
-    - #35114: Updated PrestaShop Packages (by @github-actions[bot])
+    - #35114: Updated fahsishop Packages (by @github-actions[bot])
     - #35058: Disable autofill of password for SMTP (by @ShaiMagal)
-    - #35042: Updated PrestaShop Packages (by @github-actions[bot])
+    - #35042: Updated fahsishop Packages (by @github-actions[bot])
     - #35034: Bump ps emailalerts to v3 (by @Hlavtox)
     - #35000: Prevent Internal Server Error 500 - opcache_reset with restrict_api (by @ShaiMagal)
     - #34957: Remove old Czech lower VAT 10% and 15% (by @ShaiMagal)
@@ -329,9 +329,9 @@ Changelog for PrestaShop 8
 - Core:
   - Improvement:
     - #34811: Exclude new routes for Security Annotation linter command (by @boherm)
-    - #34723: Updated PrestaShop Packages (by @github-actions[bot])
+    - #34723: Updated fahsishop Packages (by @github-actions[bot])
     - #34678: [Gift message] allow more special characters, for example <> (by @ShaiMagal)
-    - #34632: Updated PrestaShop Packages (by @github-actions[bot])
+    - #34632: Updated fahsishop Packages (by @github-actions[bot])
     - #34458: CO: improvement : Performance String Modifier (by @Shoprunners)
     - #34529: New 12% VAT Czech Republic from 2024-01-01 (by @ShaiMagal)
     - #34448: Validate smarty render calls (prevent errors from outdated themes) (by @ShaiMagal)
@@ -413,12 +413,12 @@ Changelog for PrestaShop 8
 - Core:
   - Improvement:
     - #34026: Update product comments in composer.lock (by @jolelievre)
-    - #33853: Updated PrestaShop Packages (by @github-actions[bot])
+    - #33853: Updated fahsishop Packages (by @github-actions[bot])
     - #33407: Do not check for multiple image formats feature, add fallback (by @Hlavtox)
-    - #33817: Updated PrestaShop Packages (by @github-actions[bot])
-    - #33598: Updated PrestaShop Packages (by @github-actions[bot])
+    - #33817: Updated fahsishop Packages (by @github-actions[bot])
+    - #33598: Updated fahsishop Packages (by @github-actions[bot])
     - #33515: Retry downloading language packs (by @Hlavtox)
-    - #33467: Updated PrestaShop Packages (by @github-actions[bot])
+    - #33467: Updated fahsishop Packages (by @github-actions[bot])
     - #33433: Use proper limit for CMS page content (by @Hlavtox)
   - Bug fix:
     - #33894: Fix adding and deleting language entries from tables (by @Hlavtox)
@@ -671,7 +671,7 @@ Changelog for PrestaShop 8
     - #31754: Correct translation domain names to standardize (by @lartist)
     - #31707: Update composer.lock for modules contactform and ps_contactinfo (by @matthieu-rolland)
     - #31692: Corrects some CORE wordings (by @lartist)
-    - #31623: Updated PrestaShop Packages (by @github-actions[bot])
+    - #31623: Updated fahsishop Packages (by @github-actions[bot])
     - #31574: Lock theme classic version to 2.0.8 (by @matthieu-rolland)
     - #31575: Add missing licence  (by @matthieu-rolland)
     - #31558: Bump classic theme to 2.1.0 (by @lartist)
@@ -1172,7 +1172,7 @@ Changelog for PrestaShop 8
     - #29411: Add availability labels to combinations (by @Hlavtox)
     - #30310: Add default config value for backorder status (by @Hlavtox)
   - Improvement:
-    - #31260: Update PrestaShop module version (by @lartist)
+    - #31260: Update fahsishop module version (by @lartist)
     - #31226: Update dependency classic theme (by @lartist)
     - #31249: Update licenses (by @lartist)
     - #31236: Bump patch symfony (by @lartist)
@@ -1186,12 +1186,12 @@ Changelog for PrestaShop 8
     - #31044: Deprecate some useless classes related to legacy upload system (by @matthieu-rolland)
     - #31043: Fix deprecated function usage (by @FabienPapet)
     - #31031: Deprecate renderForm methods (by @FabienPapet)
-    - #30971: Use PrestaShop's jwt repository (by @atomiix)
+    - #30971: Use fahsishop's jwt repository (by @atomiix)
     - #30999: Add stub file for IDE exploration (by @matthieu-rolland)
     - #30956: Bump phpstan/phpstan from 1.9.6 to 1.9.14 (by @Progi1984)
-    - #30964: Updated PrestaShop Packages (by @github-actions[bot])
-    - #30941: Updated PrestaShop Packages (by @github-actions[bot])
-    - #30923: Updated PrestaShop Packages (by @github-actions[bot])
+    - #30964: Updated fahsishop Packages (by @github-actions[bot])
+    - #30941: Updated fahsishop Packages (by @github-actions[bot])
+    - #30923: Updated fahsishop Packages (by @github-actions[bot])
     - #30541: Speed up product deletion (by @davidglezz)
     - #30588: Load module autoloaders and service configurations before the core Symfony compiler passes are executed (by @dr-woland)
     - #28521: Remove final class from attachment uploader (by @integritty)
@@ -1231,7 +1231,7 @@ Changelog for PrestaShop 8
     - #29113: More data available for the productoutofstock email (by @kpodemski)
     - #29094: Add Smarty blocks to variables and styles definition (by @PrestaEdit)
     - #29092: Remove commented code (by @PrestaEdit)
-    - #28949: Change PrestaShop URL in footer of emails (by @micka-fdz)
+    - #28949: Change fahsishop URL in footer of emails (by @micka-fdz)
   - Bug fix:
     - #31032: Fix LOGO_MAIL in multistore (by @jweillinfo)
     - #31006: Fix conversion of hex color codes (by @lmeyer1)
@@ -1688,7 +1688,7 @@ Changelog for PrestaShop 8
     - #29411: Add availability labels to combinations (by @Hlavtox)
     - #30310: Add default config value for backorder status (by @Hlavtox)
   - Improvement:
-    - #31260: Update PrestaShop module version (by @lartist)
+    - #31260: Update fahsishop module version (by @lartist)
     - #31226: Update dependency classic theme (by @lartist)
     - #31249: Update licenses (by @lartist)
     - #31236: Bump patch symfony (by @lartist)
@@ -1702,12 +1702,12 @@ Changelog for PrestaShop 8
     - #31044: Deprecate some useless classes related to legacy upload system (by @matthieu-rolland)
     - #31043: Fix deprecated function usage (by @FabienPapet)
     - #31031: Deprecate renderForm methods (by @FabienPapet)
-    - #30971: Use PrestaShop's jwt repository (by @atomiix)
+    - #30971: Use fahsishop's jwt repository (by @atomiix)
     - #30999: Add stub file for IDE exploration (by @matthieu-rolland)
     - #30956: Bump phpstan/phpstan from 1.9.6 to 1.9.14 (by @Progi1984)
-    - #30964: Updated PrestaShop Packages (by @github-actions[bot])
-    - #30941: Updated PrestaShop Packages (by @github-actions[bot])
-    - #30923: Updated PrestaShop Packages (by @github-actions[bot])
+    - #30964: Updated fahsishop Packages (by @github-actions[bot])
+    - #30941: Updated fahsishop Packages (by @github-actions[bot])
+    - #30923: Updated fahsishop Packages (by @github-actions[bot])
     - #30541: Speed up product deletion (by @davidglezz)
     - #30588: Load module autoloaders and service configurations before the core Symfony compiler passes are executed (by @dr-woland)
     - #28521: Remove final class from attachment uploader (by @integritty)
@@ -1747,7 +1747,7 @@ Changelog for PrestaShop 8
     - #29113: More data available for the productoutofstock email (by @kpodemski)
     - #29094: Add Smarty blocks to variables and styles definition (by @PrestaEdit)
     - #29092: Remove commented code (by @PrestaEdit)
-    - #28949: Change PrestaShop URL in footer of emails (by @micka-fdz)
+    - #28949: Change fahsishop URL in footer of emails (by @micka-fdz)
   - Bug fix:
     - #31032: Fix LOGO_MAIL in multistore (by @jweillinfo)
     - #31006: Fix conversion of hex color codes (by @lmeyer1)
@@ -2735,7 +2735,7 @@ Changelog for PrestaShop 8
     - #26015: Fix wording of prestashop:update:sql-upgrade-file-hooks-listing (by @PrestaEdit)
     - #25954: Update modules list in composer.json (by @PierreRambaud)
     - #25908: Fix wrong PrestaShopBundle templates directory (by @atomiix)
-    - #25847: [BC Break] Update cssjanus 1.2 to 2.1, stop relying on PrestaShop fork (by @matks)
+    - #25847: [BC Break] Update cssjanus 1.2 to 2.1, stop relying on fahsishop fork (by @matks)
     - #25844: Deprecate fields.php usage (by @matks)
     - #25842: [BC Break] Update egulias/email-validator to latest version (by @PierreRambaud)
     - #25839: [BC Break] Removed mcrypt dependencies (by @Progi1984)
@@ -2745,7 +2745,7 @@ Changelog for PrestaShop 8
     - #24581: Assign ID prop to null instead of unset (by @mvorisek)
     - #25435: [BC Break] Update twig to v3 (by @atomiix)
     - #25391: Fixed PHPDoc (by @Progi1984)
-    - #25296: Make PrestaShop compatible with PHP 8.0 (by @atomiix)
+    - #25296: Make fahsishop compatible with PHP 8.0 (by @atomiix)
     - #25287: Removed code related to Gamification module (by @Progi1984)
     - #25052: [BC Break] Remove Symfony 4.4 deprecations (by @atomiix)
     - #24985: In dev mode, hooks must not swallow exceptions (by @lmeyer1)
@@ -2790,7 +2790,7 @@ Changelog for PrestaShop 8
     - #26246: Fix robots.txt and generate new one when action on languages (by @okom3pom)
     - #27240: Fix uploader types validation (by @atomiix)
     - #27587: Update Twig to 3.3.8 (by @kpodemski)
-    - #27355: Do not pad ps_versions_compliancy for PrestaShop >= 8 (by @atomiix)
+    - #27355: Do not pad ps_versions_compliancy for fahsishop >= 8 (by @atomiix)
     - #27234: Fix regexp of "id_product_attribute" keyword in product route (by @saulaski)
     - #27367: Fix LocalizationWarmer condition (by @davidglezz)
     - #27339: Set disabled class for label if the input is disabled (by @Progi1984)
@@ -2836,7 +2836,7 @@ Changelog for PrestaShop 8
     - #27592: Remove classic theme from project and include it through composer (by @eternoendless)
     - #27416: Remove unused variables in Cart::applyProductCalculations() (by @eternoendless)
     - #27401: Use mbstring functions without check if exist (by @davidglezz)
-    - #27566: [BC Break] Removed dead code relative to PrestaShop Addons (by @Progi1984)
+    - #27566: [BC Break] Removed dead code relative to fahsishop Addons (by @Progi1984)
     - #27354: [BC Break] Removed dead code about Marketplace (by @Progi1984)
     - #26773: Get specific prices: let mysql optimize the query. (by @lmeyer1)
     - #27361: Deprecate Tools::arrayReplaceRecursive() (by @davidglezz)
@@ -2846,15 +2846,15 @@ Changelog for PrestaShop 8
     - #27112: [BC Break] Remove Tools::addonsRequest('service') calls (Part 2) (by @Progi1984)
     - #27113: [BC Break] Remove Tools::addonsRequest('customer_themes') calls (Part 2) (by @Progi1984)
     - #27116: Replace a die() by PrestaShopException (by @clotairer)
-    - #26947: [BC Break] Removed PrestaShop API Calls (install-modules & check-customer) (by @Progi1984)
+    - #26947: [BC Break] Removed fahsishop API Calls (install-modules & check-customer) (by @Progi1984)
     - #26662: Remove code linked to `trackingfront` & `watermark` Modules (by @Progi1984)
     - #26874: Simplify huge IF-ELSE blocks in validateOrder (by @pnucci)
     - #26981: [BC Break] Remove deprecated constant `_PS_HOST_MODE_` (by @Progi1984)
-    - #26664: [BC Break] Removed PrestaShop API Call (check_module & module_download) (by @Progi1984)
+    - #26664: [BC Break] Removed fahsishop API Call (check_module & module_download) (by @Progi1984)
     - #25937: Replace Shudrum ArrayFinder by Symfony ArrayFinder in Theme (by @matks)
     - #25919: Replace Shudrum ArrayFinder usage by Symfony ArrayFinder in PhpParameters (by @matks)
     - #26650: Remove code linked to `gapi` Module (by @Progi1984)
-    - #25713: [BC Break] Remove PrestaShop API Calls (native, native_all, customer, must-have) (by @Progi1984)
+    - #25713: [BC Break] Remove fahsishop API Calls (native, native_all, customer, must-have) (by @Progi1984)
     - #26489: Removing some duplicated code lines (by @beattie282)
     - #26268: Deleting extra parameter (by @christophe-rouille)
     - #25406: Add doc block + improve readability of HistoryController::getUrlToInvoice & HistoryController::getUrlToReorder (by @Sinepel)
@@ -2920,7 +2920,7 @@ Changelog for PrestaShop 8
 - Tests:
   - Improvement:
     - #29099: Add docker-compose.override.yml to ignored files (by @FabienPapet)
-    - #28412: Remove useless PrestaShop install (by @atomiix)
+    - #28412: Remove useless fahsishop install (by @atomiix)
     - #27055: Split integration workflows into two, get rid of processIsolation (by @jolelievre)
     - #27974: Pin setup-gcloud to v0 instead of master (by @sethvargo)
     - #27649: Added survival test for Outstanding page (by @Progi1984)

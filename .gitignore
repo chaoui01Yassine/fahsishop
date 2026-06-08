@@ -1,0 +1,27 @@
+# Dépendances (régénérables) — partout dans l'arbre
+vendor/
+
+# Dossier fantôme
+/fahsishop/
+
+# Configuration sensible (mots de passe, clés)
+/app/config/parameters.php
+
+# Caches (auto-générés)
+/var/
+/cache/smarty/compile/
+/cache/smarty/cache/
+
+# Logs
+/var/logs/
+*.log
+
+# Upload et médias (optionnel)
+# /img/p/
+# /img/c/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

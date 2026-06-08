@@ -1,6 +1,6 @@
 {**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+ * Copyright since 2007 fahsishop and Contributors
+ * fahsishop is an International Registered Trademark & Property of fahsishop
  *
  * NOTICE OF LICENSE
  *
@@ -10,10 +10,10 @@
  * https://opensource.org/licenses/AFL-3.0
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
+ * to contact@fahsishop.com so we can send you a copy immediately.
  *
- * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright Since 2007 PrestaShop SA and Contributors
+ * @author    fahsishop <contact@fahsishop.com>
+ * @copyright Since 2007 fahsishop and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
 <div class="panel col-lg-10 right-panel">
@@ -40,7 +40,7 @@
                     <h4 class="card-title-size"><i class="fa fa-eye"></i> <span class="card-title">{l s='Manage' mod='psgdpr'}</span></h4>
                 </div>
                 <div class="card-body">
-                    <p class="card-text">{l s='See our Personal data management tab to visualize the data collected by PrestaShop and community modules and manage your customers’ personal data.' mod='psgdpr'}</p>
+                    <p class="card-text">{l s='See our Personal data management tab to visualize the data collected by fahsishop and community modules and manage your customers’ personal data.' mod='psgdpr'}</p>
                 </div>
             </div>
         </div>
