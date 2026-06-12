@@ -37,18 +37,7 @@
   <p class="h4 text-uppercase block-contact-title hidden-sm-down">{l s='Store information' d='Shop.Theme.Global'}</p>
   <div id="contact-infos" class="collapse">
     {$contact_infos.address.formatted nofilter}
-    {if $contact_infos.phone}
-      <br>
-      {* [1][/1] is for a HTML tag. *}
-      {l s='Call us: [1]%phone%[/1]'
-        sprintf=[
-        '[1]' => "<a href='tel:{$contact_infos['phone']|replace:' ':''}'>",
-        '[/1]' => '</a>',
-        '%phone%' => $contact_infos.phone
-        ]
-        d='Shop.Theme.Global'
-      }
-    {/if}
+    {* Numéro de téléphone retiré à la demande du client *}
     {if $contact_infos.fax}
       <br>
       {* [1][/1] is for a HTML tag. *}
