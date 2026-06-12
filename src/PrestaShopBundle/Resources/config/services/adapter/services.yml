@@ -119,13 +119,13 @@ services:
     class: PrestaShop\PrestaShop\Adapter\Translations\TranslationRouteFinder
     arguments:
       - '@prestashop.service.translation'
-      - '@=service("PrestaShop\PrestaShop\Adapter\LegacyContext").getContext().link'
+      - '@=service("PrestaShop\\PrestaShop\\Adapter\\LegacyContext").getContext().link'
       - '@prestashop.core.admin.module.repository'
 
   prestashop.adapter.shop.shop_url:
     class: 'PrestaShop\PrestaShop\Adapter\Shop\ShopUrlDataProvider'
     arguments:
-      - '@=service("PrestaShop\PrestaShop\Adapter\LegacyContext").getContext().shop.id'
+      - '@=service("PrestaShop\\PrestaShop\\Adapter\\LegacyContext").getContext().shop.id'
 
   prestashop.adapter.file.htaccess_file_generator:
     class: 'PrestaShop\PrestaShop\Adapter\File\HtaccessFileGenerator'

@@ -676,8 +676,8 @@ services:
     public: true
     arguments:
       - '@=service("prestashop.core.form.choice_provider.canonical_redirect_type").getChoices()'
-      - '@=service("PrestaShop\PrestaShop\Core\Util\Url\UrlFileCheckerInterface").isHtaccessFileWritable()'
-      - '@=service("PrestaShop\PrestaShop\Adapter\Tools").isModRewriteActive()'
+      - '@=service("PrestaShop\\PrestaShop\\Core\\Util\\Url\\UrlFileCheckerInterface").isHtaccessFileWritable()'
+      - '@=service("PrestaShop\\PrestaShop\\Adapter\\Tools").isModRewriteActive()'
       - '@=service("prestashop.adapter.shop.shop_url").doesMainShopUrlExist()'
     tags:
       - { name: form.type }
