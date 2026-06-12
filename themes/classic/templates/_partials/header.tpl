@@ -47,7 +47,11 @@
           </div>
           <div class="float-xs-right" id="_mobile_cart"></div>
           <div class="float-xs-right" id="_mobile_user_info"></div>
-          <div class="top-logo" id="_mobile_logo"></div>
+          <div class="top-logo" id="_mobile_logo">
+            <a href="{$urls.base_url}" aria-label="{$shop.name}">
+              <img class="fs-logo-img-mobile" src="{$urls.theme_assets}img/logo-fahsishop.png?v=2" alt="{$shop.name}" />
+            </a>
+          </div>
           <div class="clearfix"></div>
         </div>
       </div>
@@ -58,20 +62,16 @@
 {block name='header_top'}
   <div class="header-top">
     <div class="container">
-       <div class="row align-items-center">
-        <div class="col-md-12 col-sm-12 position-static header-top-full">
-          <div id="_desktop_logo" class="header-logo-inline hidden-sm-down">
-            {if $shop.logo_details}
-              {if $page.page_name == 'index'}
-                <h1 class="m-0">{renderLogo}</h1>
-              {else}
-                {renderLogo}
-              {/if}
-            {/if}
-          </div>
-          <div class="header-top-right position-static">
-            {hook h='displayTop'}
-          </div>
+      <div class="fs-headerbar">
+        <div id="_desktop_logo" class="fs-headerbar-logo hidden-sm-down">
+          {if $page.page_name == 'index'}<h1 class="m-0">{/if}
+          <a href="{$urls.base_url}" class="fs-logo" aria-label="{$shop.name}">
+            <img class="fs-logo-img" src="{$urls.theme_assets}img/logo-fahsishop.png?v=2" alt="{$shop.name} — Artisanat Marocain" />
+          </a>
+          {if $page.page_name == 'index'}</h1>{/if}
+        </div>
+        <div class="header-top-right fs-headerbar-main position-static">
+          {hook h='displayTop'}
         </div>
       </div>
       <div id="mobile_top_menu_wrapper" class="row hidden-md-up" style="display:none;">

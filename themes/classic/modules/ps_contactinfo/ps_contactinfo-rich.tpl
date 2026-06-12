@@ -29,16 +29,7 @@
     <div class="icon"><i class="material-icons">&#xE55F;</i></div>
     <div class="data">{$contact_infos.address.formatted nofilter}</div>
   </div>
-  {if $contact_infos.phone}
-    <hr/>
-    <div class="block">
-      <div class="icon"><i class="material-icons">&#xE0CD;</i></div>
-      <div class="data">
-        {l s='Call us:' d='Shop.Theme.Global'}<br/>
-        <a href="tel:{$contact_infos.phone}">{$contact_infos.phone}</a>
-       </div>
-    </div>
-  {/if}
+  {* Numéro de téléphone retiré à la demande du client *}
   {if $contact_infos.fax}
     <hr/>
     <div class="block">
